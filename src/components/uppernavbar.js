@@ -6,8 +6,7 @@ const UpperNavbar = () => {
     <div className="wrapper">
       <div className="image-div">
         <img src={img} />
-        <b>Hello World</b>
-        <b>Hello World Again</b>
+        <b>Changes made to uppernavbar</b>
       </div>
     </div>
   );
