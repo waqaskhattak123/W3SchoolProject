@@ -7,9 +7,9 @@ const UpperNavbar = () => {
       <div className="image-div">
         <img src={img} />
         <b>Hello World</b>
+        <b>Hello World Again</b>
       </div>
     </div>
   );
 };
-
 export default UpperNavbar;
