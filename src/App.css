@@ -1,3 +1,160 @@
-.App{
-  text-align: center;
+.container {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(10, minmax(90px, 100px));
+  grid-template-rows: repeat(1, minmax(auto-fit, auto-fit));
+  padding-top: 5px;
+  grid-column-gap: 40px;
+  margin-top: 0px;
 }
+.container span {
+  text-decoration: none;
+  color: black;
+  font-size: large;
+  padding: 5px;
+}
+.container span:hover {
+  background-color: rgb(20, 201, 20);
+  background-size: cover;
+}
+.second-div {
+  background-color: black;
+  color: white;
+  font-size:15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10px, 60px));
+  grid-template-rows: repeat(auto-fit, minmax(20px, auto));
+  width: 99.9%;
+  grid-column-gap: 20px;
+  height: auto;
+  padding-top: 10px;
+}
+.second_div_Two {
+  padding-left: 330px;
+  background-color: black;
+  color: white;
+  height: 500px;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(70px, auto));
+  grid-template-rows: repeat(1, minmax(10px, auto));
+}
+.second_div_Two h1 {
+  margin: 0px 0 -20px 0 !important;
+  padding-top: 60px;
+  font-size: 56px;
+}
+
+.tutortials:hover {
+  cursor: pointer;
+}
+.tutorials:active {
+  background-color: green;
+}
+.tutorials-div {
+  height: 700px;
+  background-color: black;
+  color: white;
+  font-size: large;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(70px, auto));
+  grid-template-rows: repeat(1, minmax(1fr, auto));
+  padding: 70px;
+  grid-column-gap: 40px;
+  color: yellow;
+}
+.tutorials-div select {
+  border-radius: 40px;
+  width: 282px;
+  height: 44px;
+}
+.cross:hover {
+  cursor: pointer;
+}
+.under-tutorials {
+  padding-top: 30px;
+  font-size: 15px;
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(10px, 1fr));
+  grid-template-rows: repeat(auto, 1fr);
+  grid-row-gap: 10px;
+}
+.under-tutorials1 {
+  padding-top: 30px;
+  font-size: 15px;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(10px, 1fr));
+  grid-template-rows: repeat(auto, 1fr);
+  grid-row-gap: 10px;
+  color: wheat;
+  grid-column-start: 2;
+}
+.under_tutorials_span {
+  font-size: smaller;
+  color: yellow;
+  padding: 10px;
+}
+.Third_div {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(auto, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(70px, auto));
+  align-content: center;
+  grid-gap: 100px;
+  padding-top: 40px;
+  height: 800px;
+}
+@media screen and (max-width: 768px) {
+  .Third_div {
+    grid-template-columns: repeat(4, minmax(auto, 1fr));
+    grid-template-rows: repeat(2, minmax(auto, 1fr));
+  }
+  .Third_div_second_div {
+    grid-column: span 4;
+    padding-left: 50px;
+  }
+}
+.php_div {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(70px, auto));
+  grid-template-rows: repeat(3, minmax(70px, auto));
+  background-color: black;
+}
+.php_div_commonClass {
+  width: 500px;
+  height: auto;
+  margin: 50px;
+  padding: 40px;
+  padding-left: 100px;
+  background-color: #ffc0c7;
+}
+.social_media{
+  width: 50%;
+  height: 150px;
+  margin-left: 500px;
+  margin-top: 70px;
+}
+.footer_container{
+ 
+  display: grid;
+  grid-template-columns: repeat(4, minmax(70px, auto-fit));
+  grid-template-rows: repeat(auto-fit, minmax(30px, 20px));
+  grid-gap: 10px;
+}
+.footer_container_top_tutorials{
+  display: grid;
+  grid-template-columns: repeat(1, minmax(auto-fit, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(auto-fit, 1fr));
+  grid-column: 1/1;
+  padding-left: 40px;
+  
+}
+.footer_container_top_tutorials_links{
+  text-decoration: none;
+  color: black;
+}
+
+
+
+
+
