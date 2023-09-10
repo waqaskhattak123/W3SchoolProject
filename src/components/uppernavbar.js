@@ -7,11 +7,12 @@ import { NavLink } from "react-router-dom";
 import { Button } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+
 const UpperNavbar = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [isTrue, setIsTrue] = useState(true);
   const [isfocus, setIsFocus] = useState(false);
-
+  const [isOpen, setIsOpen] = useState(false);
   const handleClick = () => {
     setIsVisible(!isVisible);
     setIsVisible(!isVisible);
@@ -23,6 +24,7 @@ const UpperNavbar = () => {
   const handleBlur = () => {
     setIsFocus(false);
   };
+ 
 
   return (
     <>
@@ -31,7 +33,7 @@ const UpperNavbar = () => {
         <span onClick={handleClick} className="tutortials">
           Tutorials
         </span>
-        <span>Exercies</span>
+        <span><NavLink>Exercies</NavLink></span>
         <span>Get Certifeid</span>
         <span>Services</span>
         <span>BootCamps</span>
@@ -240,30 +242,7 @@ const UpperNavbar = () => {
         </div>
       )}
       {/* Second Div Started */}
-      {isTrue && (
-        <div className="second-div">
-          <span> HTML</span>
-          <span>CSS</span>
-          <span>JAVASCRIPT</span>
-          <span>SQL</span>
-          <span>PHYTON</span>
-          <span>JAVA</span>
-          <span>PHP</span>
-          <span>HOW TO</span>
-          <span>W3.CSS</span>
-          <span>C</span>
-          <span>C++</span>
-          <span>C#</span>
-          <span>JQUERY</span>
-          <span>EXCEL</span>
-          <span>XML</span>
-          <span>DJANGO</span>
-          <span>NODEJS</span>
-          <span>R</span>
-          <span>TYPSCRIPT</span>
-          <span>ANGULAR</span>
-        </div>
-      )}
+      
       <div className="second_div_Two">
         <h1>Learn To Coding</h1>
         <h2 style={{ marginTop: "70px", color: "yellow" }}>
@@ -291,7 +270,7 @@ const UpperNavbar = () => {
             fontSize: "40px",
           }}
         >
-          <NavLink style={{ color: "white", paddingLeft: "10px" }}>
+          <NavLink to={'details/html'} style={{ color: "white", paddingLeft: "10px" }}>
             Not Sure Where To Begin? Click Here
           </NavLink>
         </h2>
@@ -310,12 +289,13 @@ const UpperNavbar = () => {
         >
           <h1 style={{ fontSize: "80px" }}>HTML</h1>
           <h3>The Language For Building Web Pages</h3>
-          <Button
+          <NavLink to={'details/html'}><Button
             className="square bg-primary rounded-pill"
             style={{ width: "150px" }}
           >
-            Learn HTML
-          </Button>
+           Learn HTML
+          </Button></NavLink> 
+          
           <Button
             className="square bg-primary rounded-pill"
             style={{ width: "150px" }}
@@ -386,12 +366,15 @@ const UpperNavbar = () => {
         >
           <h1 style={{ fontSize: "80px" }}>CSS</h1>
           <h3>The Language For Styling Web Pages</h3>
-          <Button
+          <NavLink to={'details/css'}>
+            <Button
             className="square bg-primary rounded-pill"
             style={{ width: "150px" }}
           >
             Learn CSS
           </Button>
+          </NavLink>
+          
           <Button
             className="square bg-primary rounded-pill"
             style={{ width: "150px" }}

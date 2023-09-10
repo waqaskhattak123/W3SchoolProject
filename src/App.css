@@ -23,10 +23,10 @@
   color: white;
   font-size:15px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(10px, 60px));
-  grid-template-rows: repeat(auto-fit, minmax(20px, auto));
+  grid-template-columns: repeat(18, minmax(70px, 200px));
+  grid-template-rows: repeat(2, minmax(auto-fit, auto-fit));
   width: 99.9%;
-  grid-column-gap: 20px;
+  /* grid-column-gap: 20px; */
   height: auto;
   padding-top: 10px;
 }
@@ -153,6 +153,10 @@
   text-decoration: none;
   color: black;
 }
+.html_details_page{
+  background-color: aqua;
+}
+
 
 
 

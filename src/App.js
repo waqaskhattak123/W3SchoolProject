@@ -5,12 +5,15 @@ import { BrowserRouter,Routes, Route } from 'react-router-dom';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { fas } from '@fortawesome/free-solid-svg-icons';
+import Details from './components/Details';
+
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
       <Routes>
         <Route path='/' element={ <UpperNavbar/>}></Route>
+        <Route path='/details/:name' element={ <Details/>}></Route>
       </Routes>
       </BrowserRouter>
   
