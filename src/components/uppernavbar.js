@@ -5,262 +5,46 @@ import instagram from "../images/instagram.svg";
 import twitter from "../images/twitter.svg";
 import { NavLink } from "react-router-dom";
 import { Button } from "react-bootstrap";
+import NavBarCompo from "./NavBarCompo";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 
 const UpperNavbar = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [isTrue, setIsTrue] = useState(true);
   const [isfocus, setIsFocus] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-  const handleClick = () => {
-    setIsVisible(!isVisible);
-    setIsVisible(!isVisible);
-    setIsTrue(!isTrue);
-  };
+
   const handleFocus = () => {
     setIsFocus(true);
   };
   const handleBlur = () => {
     setIsFocus(false);
   };
- 
 
   return (
     <>
-      <div className="container">
-        <img src={img} alt="img" width="40px" height="40px" />
-        <span onClick={handleClick} className="tutortials">
-          Tutorials
-        </span>
-        <span><NavLink>Exercies</NavLink></span>
-        <span>Get Certifeid</span>
-        <span>Services</span>
-        <span>BootCamps</span>
-        <span>Spaces</span>
-        <span>Login</span>
-        <span>SignUp</span>
-      </div>
-      {isVisible && (
-        // HTML COURSE
-        <div className="tutorials-div">
-          <span style={{ fontSize: "50px" }}>
-            Tutorials
-            <div className="under-tutorials">
-              <h1>FRONT END</h1>
-              <span>
-                <span>Learn</span> HTML{" "}
-                <NavLink className="under_tutorials_span">Tutorials</NavLink>
-                <NavLink className="under_tutorials_span">Reference</NavLink>
-              </span>
-              <span>
-                CSS <NavLink className="under_tutorials_span">Tutorials</NavLink>
-                <NavLink className="under_tutorials_span">Reference</NavLink>
-              </span>
-              <span>
-                RWD <NavLink className="under_tutorials_span">Tutorials</NavLink>
-                <NavLink className="under_tutorials_span">Reference</NavLink>
-              </span>
-              <span>
-                BOOTSTRAPE{" "}
-                <NavLink className="under_tutorials_span">Tutorials</NavLink>
-                <NavLink className="under_tutorials_span">Reference</NavLink>
-              </span>
-              <span>
-                W3.CSS <NavLink className="under_tutorials_span">Tutorials</NavLink>
-                <NavLink className="under_tutorials_span">Reference</NavLink>
-              </span>
-              <span>
-                SASS <NavLink className="under_tutorials_span">Tutorials</NavLink>
-                <NavLink className="under_tutorials_span">Reference</NavLink>
-              </span>
-              <span>
-                COLORS <NavLink className="under_tutorials_span">Tutorials</NavLink>
-                <NavLink className="under_tutorials_span">Reference</NavLink>
-              </span>
-              <span>
-                ICONS <NavLink className="under_tutorials_span">Tutorials</NavLink>
-                <NavLink className="under_tutorials_span">Reference</NavLink>
-              </span>
-              <span>
-                SVG <NavLink className="under_tutorials_span">Tutorials</NavLink>
-                <NavLink className="under_tutorials_span">Reference</NavLink>
-              </span>
-              <span>
-                CANVAS <NavLink className="under_tutorials_span">Tutorials</NavLink>
-                <NavLink className="under_tutorials_span">Reference</NavLink>
-              </span>
-              <span>
-                GRAPHICS <NavLink className="under_tutorials_span">Tutorials</NavLink>
-                <NavLink className="under_tutorials_span">Reference</NavLink>
-              </span>
-              <span>
-                HOW TO <NavLink className="under_tutorials_span">Tutorials</NavLink>
-                <NavLink className="under_tutorials_span">Reference</NavLink>
-              </span>
-              <h3>Data Analytics</h3>
-              <span>
-                <span>Learn</span> AI{" "}
-                <NavLink className="under_tutorials_span">Tutorials</NavLink>
-              </span>
-              <span>
-                <span>Learn</span> GENERATIVE AI{" "}
-                <NavLink className="under_tutorials_span">Tutorials</NavLink>
-              </span>
-              <span>
-                <span>Learn</span> CHAT GPT 3.5{" "}
-                <NavLink className="under_tutorials_span">Tutorials</NavLink>
-              </span>
-              <span>
-                <span>Learn</span> CHAT GPT 4{" "}
-                <NavLink className="under_tutorials_span">Tutorials</NavLink>
-              </span>
-            </div>
-          </span>
-          <span>
-            <input
-              type="text"
-              style={{
-                borderRadius: "40px",
-                width: "282px",
-                height: "44px",
-              }}
-              placeholder="Search Tutorials"
-            />
-            {/* Front End */}
-            <div className="under-tutorials1">
-              <h1>Front End Programming</h1>
-              <span>
-                <span>Learn</span> JAVASCRIPT{" "}
-                <NavLink className="under_tutorials_span">Tutorials</NavLink>
-                <NavLink className="under_tutorials_span">Reference</NavLink>
-              </span>
-              <span>
-                REACT <NavLink className="under_tutorials_span">Tutorials</NavLink>
-                <NavLink className="under_tutorials_span">Reference</NavLink>
-              </span>
-              <span>
-                JQUERY <NavLink className="under_tutorials_span">Tutorials</NavLink>
-                <NavLink className="under_tutorials_span">Reference</NavLink>
-              </span>
-              <span>
-                VUE <NavLink className="under_tutorials_span">Tutorials</NavLink>
-                <NavLink className="under_tutorials_span">Reference</NavLink>
-              </span>
-              <span>
-                ANGULAR <NavLink className="under_tutorials_span">Tutorials</NavLink>
-                <NavLink className="under_tutorials_span">Reference</NavLink>
-              </span>
-              <span>
-                JSON <NavLink className="under_tutorials_span">Tutorials</NavLink>
-                <NavLink className="under_tutorials_span">Reference</NavLink>
-              </span>
-              <span>
-                AJAX <NavLink className="under_tutorials_span">Tutorials</NavLink>
-                <NavLink className="under_tutorials_span">Reference</NavLink>
-              </span>
-              <span>
-                APPMIL <NavLink className="under_tutorials_span">Tutorials</NavLink>
-                <NavLink className="under_tutorials_span">Reference</NavLink>
-              </span>
-              <span>
-                W3.JS <NavLink className="under_tutorials_span">Tutorials</NavLink>
-                <NavLink className="under_tutorials_span">Reference</NavLink>
-              </span>
-              <h3>Web Building</h3>
-              <span>Create a Website</span>
-              <span>Create a Server</span>
-              <span>Where to Start</span>
-              <span>Web Templates</span>
-              <span>Web Statistics</span>
-              <span>Web Certificates</span>
-            </div>
-          </span>
+     {/* SideBarStarted */}
+    <NavBarCompo/>
+     {/* Sidebar Ended */}
 
-          <span>
-            <select>
-              <option value={"Sort by"}>Sort by</option>
-              <option>Alphabatically</option>
-              <option>Popularity</option>
-            </select>
-            {/* Backend Tutorials */}
-
-            <div className="under-tutorials1">
-              <h1>Backend</h1>
-              <span>
-                <span>Learn</span> PHYTON{" "}
-                <NavLink className="under_tutorials_span">Tutorials</NavLink>
-                <NavLink className="under_tutorials_span">Reference</NavLink>
-              </span>
-              <span>
-                SQL <NavLink className="under_tutorials_span">Tutorials</NavLink>
-                <NavLink className="under_tutorials_span">Reference</NavLink>
-              </span>
-              <span>
-                MYSQL <NavLink className="under_tutorials_span">Tutorials</NavLink>
-                <NavLink className="under_tutorials_span">Reference</NavLink>
-              </span>
-              <span>
-                PHP <NavLink className="under_tutorials_span">Tutorials</NavLink>
-                <NavLink className="under_tutorials_span">Reference</NavLink>
-              </span>
-              <span>
-                JAVA <NavLink className="under_tutorials_span">Tutorials</NavLink>
-                <NavLink className="under_tutorials_span">Reference</NavLink>
-              </span>
-              <span>
-                C <NavLink className="under_tutorials_span">Tutorials</NavLink>
-                <NavLink className="under_tutorials_span">Reference</NavLink>
-              </span>
-              <span>
-                C++ <NavLink className="under_tutorials_span">Tutorials</NavLink>
-                <NavLink className="under_tutorials_span">Reference</NavLink>
-              </span>
-              <span>
-                C# <NavLink className="under_tutorials_span">Tutorials</NavLink>
-                <NavLink className="under_tutorials_span">Reference</NavLink>
-              </span>
-              <span>
-                R <NavLink className="under_tutorials_span">Tutorials</NavLink>
-                <NavLink className="under_tutorials_span">Reference</NavLink>
-              </span>
-              <span>
-                KOTLIN <NavLink className="under_tutorials_span">Tutorials</NavLink>
-                <NavLink className="under_tutorials_span">Reference</NavLink>
-              </span>
-            </div>
-          </span>
-
-          <span>
-            <FontAwesomeIcon
-              icon="fa-solid fa-x"
-              size="lg"
-              onClick={handleClick}
-              className="cross"
-            />
-          </span>
-        </div>
-      )}
-      {/* Second Div Started */}
-      
-      <div className="second_div_Two">
-        <h1>Learn To Coding</h1>
+      <div className="learn_to_code">
+        <h1>Learn To Coding </h1>
         <h2 style={{ marginTop: "70px", color: "yellow" }}>
           With The Worlds Largest Web Developer Site
         </h2>
         <input
           type="text"
           placeholder="Search Our Tutorials e.g HTML"
+          onFocus={handleFocus}
+          onBlur={handleBlur}
           style={{
             width: "380px",
-            height: "34px",
+            height: "50px",
             borderRadius: "20px",
             fontSize: "20px",
             paddingLeft: "10px",
             backgroundColor: "white",
           }}
-          onFocus={handleFocus}
-          onBlur={handleBlur}
         />
 
         <h2
@@ -270,7 +54,10 @@ const UpperNavbar = () => {
             fontSize: "40px",
           }}
         >
-          <NavLink to={'details/html'} style={{ color: "white", paddingLeft: "10px" }}>
+          <NavLink
+            to={"Html/introduction"}
+            style={{ color: "white", paddingLeft: "10px" }}
+          >
             Not Sure Where To Begin? Click Here
           </NavLink>
         </h2>
@@ -289,31 +76,39 @@ const UpperNavbar = () => {
         >
           <h1 style={{ fontSize: "80px" }}>HTML</h1>
           <h3>The Language For Building Web Pages</h3>
-          <NavLink to={'details/html'}><Button
-            className="square bg-primary rounded-pill"
-            style={{ width: "150px" }}
-          >
-           Learn HTML
-          </Button></NavLink> 
-          
-          <Button
-            className="square bg-primary rounded-pill"
-            style={{ width: "150px" }}
-          >
-            Video Tutorials
-          </Button>
-          <Button
-            className="square bg-primary rounded-pill"
-            style={{ width: "150px" }}
-          >
-            HTML Reference
-          </Button>
-          <Button
-            className="square bg-primary rounded-pill"
-            style={{ width: "150px" }}
-          >
-            Get Certifeid
-          </Button>
+          <NavLink to={"Html/introduction"}>
+            <Button
+              className="square bg-primary rounded-pill"
+              style={{ width: "150px" }}
+            >
+              Learn HTML
+            </Button>
+          </NavLink>
+
+          <NavLink to={"Html/introduction"}>
+            <Button
+              className="square bg-primary rounded-pill"
+              style={{ width: "150px" }}
+            >
+             Video Tutorials
+            </Button>
+          </NavLink>
+          <NavLink to={"Html/introduction"}>
+            <Button
+              className="square bg-primary rounded-pill"
+              style={{ width: "150px" }}
+            >
+             HTML Reference
+            </Button>
+          </NavLink>
+          <NavLink to={"Html/introduction"}>
+            <Button
+              className="square bg-primary rounded-pill"
+              style={{ width: "150px" }}
+            >
+             Get Certifeid
+            </Button>
+          </NavLink>
         </div>
 
         <div
@@ -343,13 +138,7 @@ const UpperNavbar = () => {
                 </html>"
             />
           </div>
-          <Button
-            className="square bg-primary rounded-pill mx-2"
-            color="success"
-            style={{ width: "150px", color: "danger" }}
-          >
-            Try It Yourself
-          </Button>
+         
         </div>
       </div>
 
@@ -366,15 +155,15 @@ const UpperNavbar = () => {
         >
           <h1 style={{ fontSize: "80px" }}>CSS</h1>
           <h3>The Language For Styling Web Pages</h3>
-          <NavLink to={'details/css'}>
+          <NavLink to={"cssdetails/introduction"}>
             <Button
-            className="square bg-primary rounded-pill"
-            style={{ width: "150px" }}
-          >
-            Learn CSS
-          </Button>
+              className="square bg-primary rounded-pill"
+              style={{ width: "150px" }}
+            >
+              Learn CSS
+            </Button>
           </NavLink>
-          
+
           <Button
             className="square bg-primary rounded-pill"
             style={{ width: "150px" }}
@@ -423,13 +212,7 @@ const UpperNavbar = () => {
               }"
             />
           </div>
-          <Button
-            className="square bg-primary rounded-pill mx-2"
-            color="success"
-            style={{ width: "150px", color: "danger" }}
-          >
-            Try It Yourself
-          </Button>
+         
         </div>
       </div>
       {/* 3rd div for css block ended */}
@@ -446,30 +229,39 @@ const UpperNavbar = () => {
         >
           <h1 style={{ fontSize: "80px" }}>JAVASCRIPT</h1>
           <h3>The Language For Programming Web Pages</h3>
-          <Button
-            className="square bg-primary rounded-pill"
-            style={{ width: "150px" }}
-          >
-            Learn JavaScript
-          </Button>
-          <Button
-            className="square bg-primary rounded-pill"
-            style={{ width: "150px" }}
-          >
-            Video Tutorials
-          </Button>
-          <Button
-            className="square bg-primary rounded-pill"
-            style={{ width: "150px" }}
-          >
-            JavaScript Reference
-          </Button>
-          <Button
-            className="square bg-primary rounded-pill"
-            style={{ width: "150px" }}
-          >
-            Get Certifeid
-          </Button>
+          <NavLink to={"learnJavaScript/introduction"}>
+            <Button
+              className="square bg-primary rounded-pill"
+              style={{ width: "150px" }}
+            >
+              Learn JavaScript
+            </Button>
+          </NavLink>
+
+          <NavLink to={"learnJavaScript/introduction"}>
+            <Button
+              className="square bg-primary rounded-pill"
+              style={{ width: "150px" }}
+            >
+              Vedio Tutorials
+            </Button>
+          </NavLink>
+          <NavLink to={"learnJavaScript/introduction"}>
+            <Button
+              className="square bg-primary rounded-pill"
+              style={{ width: "150px" }}
+            >
+              Reference
+            </Button>
+          </NavLink>
+          <NavLink to={"learnJavaScript/introduction"}>
+            <Button
+              className="square bg-primary rounded-pill"
+              style={{ width: "150px" }}
+            >
+              Get Certifeid
+            </Button>
+          </NavLink>
         </div>
 
         <div
@@ -498,13 +290,7 @@ const UpperNavbar = () => {
               </script>"
             />
           </div>
-          <Button
-            className="square bg-primary rounded-pill mx-2"
-            color="success"
-            style={{ width: "150px", color: "danger" }}
-          >
-            Try It Yourself
-          </Button>
+         
         </div>
       </div>
       {/* 3rd div for JavaScript block Ended */}
@@ -521,12 +307,15 @@ const UpperNavbar = () => {
         >
           <h1 style={{ fontSize: "80px" }}>Phyton</h1>
           <h3>The popular Programming Language</h3>
-          <Button
-            className="square bg-primary rounded-pill"
-            style={{ width: "150px" }}
-          >
-            Learn Phyton
-          </Button>
+          <NavLink to={"/phython/introduction"}>
+            <Button
+              className="square bg-primary rounded-pill"
+              style={{ width: "150px" }}
+            >
+              Learn Phyton
+            </Button>
+          </NavLink>
+
           <Button
             className="square bg-primary rounded-pill"
             style={{ width: "150px" }}
@@ -566,13 +355,7 @@ const UpperNavbar = () => {
               print(Five is greater than two!)"
             />
           </div>
-          <Button
-            className="square bg-primary rounded-pill mx-2"
-            color="success"
-            style={{ width: "150px", color: "danger" }}
-          >
-            Try It Yourself
-          </Button>
+         
         </div>
       </div>
       {/* 3rd div for Phyton block Ended */}
@@ -589,30 +372,39 @@ const UpperNavbar = () => {
         >
           <h1 style={{ fontSize: "80px" }}>SQL</h1>
           <h3>A Language for Accessing Database</h3>
-          <Button
-            className="square bg-primary rounded-pill"
-            style={{ width: "150px" }}
-          >
-            Learn SQL
-          </Button>
-          <Button
-            className="square bg-primary rounded-pill"
-            style={{ width: "150px" }}
-          >
-            Video Tutorials
-          </Button>
-          <Button
-            className="square bg-primary rounded-pill"
-            style={{ width: "150px" }}
-          >
-            SQL Reference
-          </Button>
-          <Button
-            className="square bg-primary rounded-pill"
-            style={{ width: "150px" }}
-          >
-            Get Certifeid
-          </Button>
+          <NavLink to={"sql/introduction"}>
+            <Button
+              className="square bg-primary rounded-pill"
+              style={{ width: "150px" }}
+            >
+              Learn SQL
+            </Button>
+          </NavLink>
+
+          <NavLink to={"sql/introduction"}>
+            <Button
+              className="square bg-primary rounded-pill"
+              style={{ width: "150px" }}
+            >
+              Video tutorial
+            </Button>
+          </NavLink>
+          <NavLink to={"sql/introduction"}>
+            <Button
+              className="square bg-primary rounded-pill"
+              style={{ width: "150px" }}
+            >
+              SQL Reference
+            </Button>
+          </NavLink>
+          <NavLink to={"sql/introduction"}>
+            <Button
+              className="square bg-primary rounded-pill"
+              style={{ width: "150px" }}
+            >
+              get Certifeid
+            </Button>
+          </NavLink>
         </div>
 
         <div
@@ -634,13 +426,7 @@ const UpperNavbar = () => {
               WHERE Country='Mexico';"
             />
           </div>
-          <Button
-            className="square bg-primary rounded-pill mx-2"
-            color="success"
-            style={{ width: "150px", color: "danger" }}
-          >
-            Try It Yourself
-          </Button>
+         
         </div>
       </div>
       {/*  div for PHP block Started */}
@@ -648,7 +434,9 @@ const UpperNavbar = () => {
         <div className="php_div_commonClass">
           <h1>PHP</h1>
           <h4>A Web Server Programming Language</h4>
-          <Button>Learn PHP</Button>
+          <NavLink to={"Php/introduction"}>
+            <Button>Learn PHP</Button>
+          </NavLink>
         </div>
         <div
           className="php_div_commonClass"
@@ -656,7 +444,9 @@ const UpperNavbar = () => {
         >
           <h1>JQUERY</h1>
           <h4>A JavaScript Library For Building Web Pages</h4>
-          <Button>Learn JQUERY</Button>
+          <NavLink to={"Jquery/introduction"}>
+            <Button>Learn JQUERY</Button>
+          </NavLink>
         </div>
         <div
           className="php_div_commonClass"
@@ -664,7 +454,9 @@ const UpperNavbar = () => {
         >
           <h1>JAVA</h1>
           <h4>A Programming Language</h4>
-          <Button>Learn JAVA</Button>
+          <NavLink to={"Java/introduction"}>
+            <Button>Learn JAVA</Button>
+          </NavLink>
         </div>
         <div
           className="php_div_commonClass"
@@ -672,7 +464,9 @@ const UpperNavbar = () => {
         >
           <h1>C++</h1>
           <h4>A Programming Language</h4>
-          <Button>Learn C++</Button>
+          <NavLink to={"C++/introduction"}>
+            <Button>Learn C++</Button>
+          </NavLink>
         </div>
         <div
           className="php_div_commonClass"
@@ -680,7 +474,9 @@ const UpperNavbar = () => {
         >
           <h1>W3.CSS</h1>
           <h4>A CSS Framework for Faster and Better Responsive Webpages</h4>
-          <Button>Learn W3.CSS</Button>
+          <NavLink to={"BootstrapeComponentdetails/w3cssintroduction"}>
+            <Button>Learn W3.CSS</Button>
+          </NavLink>
         </div>
         <div
           className="php_div_commonClass"
@@ -688,7 +484,9 @@ const UpperNavbar = () => {
         >
           <h1>BOOTSTRAPE</h1>
           <h4>A CSS Framework For Better Webpages</h4>
-          <Button>Learn bootstrap</Button>
+          <NavLink to={"BootstrapeComponentdetails/bootstrapeintroduction"}>
+            <Button>Learn bootstrap</Button>
+          </NavLink>
         </div>
       </div>
       {/*  div for PHP block Ended */}
@@ -714,148 +512,352 @@ const UpperNavbar = () => {
         <div className="footer_container_top_tutorials">
           <h2>Top Tutorials</h2>
           <span>
-            <NavLink className={'footer_container_top_tutorials_links'}>HTML</NavLink>
+            <NavLink
+              className={"footer_container_top_tutorials_links"}
+              to={"Html/introduction"}
+            >
+              HTML
+            </NavLink>
           </span>
           <span>
-            <NavLink className={'footer_container_top_tutorials_links'}>CSS</NavLink>
+            <NavLink
+              className={"footer_container_top_tutorials_links"}
+              to={"cssdetails/introduction"}
+            >
+              CSS
+            </NavLink>
           </span>
           <span>
-            <NavLink className={'footer_container_top_tutorials_links'}>JavaScript</NavLink>
+            <NavLink
+              className={"footer_container_top_tutorials_links"}
+              to={"learnJavaScript/introduction"}
+            >
+              JavaScript
+            </NavLink>
           </span>
           <span>
-            <NavLink className={'footer_container_top_tutorials_links'}>How To</NavLink>
+            <NavLink
+              className={"footer_container_top_tutorials_links"}
+              to={"Html/introduction"}
+            >
+              How To
+            </NavLink>
           </span>
           <span>
-            <NavLink className={'footer_container_top_tutorials_links'}>SQL</NavLink>
+            <NavLink
+              className={"footer_container_top_tutorials_links"}
+              to={"sql/introduction"}
+            >
+              SQL
+            </NavLink>
           </span>
           <span>
-            <NavLink className={'footer_container_top_tutorials_links'}>Phyton</NavLink>
+            <NavLink
+              className={"footer_container_top_tutorials_links"}
+              to={"phython/introduction"}
+            >
+              Phyton
+            </NavLink>
           </span>
           <span>
-            <NavLink className={'footer_container_top_tutorials_links'}>W3.CSS</NavLink>
+            <NavLink
+              className={"footer_container_top_tutorials_links"}
+              to={"BootstrapeComponentdetails/w3cssintroduction"}
+            >
+              W3.CSS
+            </NavLink>
           </span>
           <span>
-            <NavLink className={'footer_container_top_tutorials_links'}>BOOTSTRAPE</NavLink>
+            <NavLink
+              className={"footer_container_top_tutorials_links"}
+              to={"BootstrapeComponentdetails/bootstrapeintroduction"}
+            >
+              BOOTSTRAPE
+            </NavLink>
           </span>
           <span>
-            <NavLink className={'footer_container_top_tutorials_links'}>JAVA</NavLink>
+            <NavLink
+              className={"footer_container_top_tutorials_links"}
+              to={"Java/introduction"}
+            >
+              JAVA
+            </NavLink>
           </span>
           <span>
-            <NavLink className={'footer_container_top_tutorials_links'}>C++</NavLink>
+            <NavLink
+              className={"footer_container_top_tutorials_links"}
+              to={"C++/introduction"}
+            >
+              C++
+            </NavLink>
           </span>
         </div>
         <div
           style={{
             gridColumn: "2/2",
           }}
-          className="footer_container_top_tutorials">
+          className="footer_container_top_tutorials"
+        >
           <h2>Top Reference</h2>
           <span>
-            <NavLink className={'footer_container_top_tutorials_links'}>HTML</NavLink>
+            <NavLink
+              className={"footer_container_top_tutorials_links"}
+              to={"Html/introduction"}
+            >
+              HTML
+            </NavLink>
           </span>
           <span>
-            <NavLink className={'footer_container_top_tutorials_links'}>CSS</NavLink>
+            <NavLink
+              className={"footer_container_top_tutorials_links"}
+              to={"cssdetails/introduction"}
+            >
+              CSS
+            </NavLink>
           </span>
           <span>
-            <NavLink className={'footer_container_top_tutorials_links'}>JavaScript</NavLink>
+            <NavLink
+              className={"footer_container_top_tutorials_links"}
+              to={"learnJavaScript/introduction"}
+            >
+              JavaScript
+            </NavLink>
           </span>
           <span>
-            <NavLink className={'footer_container_top_tutorials_links'}>How To</NavLink>
+            <NavLink
+              className={"footer_container_top_tutorials_links"}
+              to={"Html/introduction"}
+            >
+              How To
+            </NavLink>
           </span>
           <span>
-            <NavLink className={'footer_container_top_tutorials_links'}>SQL</NavLink>
+            <NavLink
+              className={"footer_container_top_tutorials_links"}
+              to={"sql/introduction"}
+            >
+              SQL
+            </NavLink>
           </span>
           <span>
-            <NavLink className={'footer_container_top_tutorials_links'}>Phyton</NavLink>
+            <NavLink
+              className={"footer_container_top_tutorials_links"}
+              to={"phython/introduction"}
+            >
+              Phyton
+            </NavLink>
           </span>
           <span>
-            <NavLink className={'footer_container_top_tutorials_links'}>W3.CSS</NavLink>
+            <NavLink
+              className={"footer_container_top_tutorials_links"}
+              to={"BootstrapeComponentdetails/w3cssintroduction"}
+            >
+              W3.CSS
+            </NavLink>
           </span>
           <span>
-            <NavLink className={'footer_container_top_tutorials_links'}>BOOTSTRAPE</NavLink>
+            <NavLink
+              className={"footer_container_top_tutorials_links"}
+              to={"BootstrapeComponentdetails/bootstrapeintroduction"}
+            >
+              BOOTSTRAPE
+            </NavLink>
           </span>
           <span>
-            <NavLink className={'footer_container_top_tutorials_links'}>JAVA</NavLink>
+            <NavLink
+              className={"footer_container_top_tutorials_links"}
+              to={"Java/introduction"}
+            >
+              JAVA
+            </NavLink>
           </span>
           <span>
-            <NavLink className={'footer_container_top_tutorials_links'}>C++</NavLink>
+            <NavLink
+              className={"footer_container_top_tutorials_links"}
+              to={"C++/introduction"}
+            >
+              C++
+            </NavLink>
           </span>
         </div>
         <div
           style={{
             gridColumn: "3/3",
           }}
-          className="footer_container_top_tutorials">
+          className="footer_container_top_tutorials"
+        >
           <h2>Top Example</h2>
           <span>
-            <NavLink className={'footer_container_top_tutorials_links'}>HTML</NavLink>
+            <NavLink
+              className={"footer_container_top_tutorials_links"}
+              to={"Html/introduction"}
+            >
+              HTML
+            </NavLink>
           </span>
           <span>
-            <NavLink className={'footer_container_top_tutorials_links'}>CSS</NavLink>
+            <NavLink
+              className={"footer_container_top_tutorials_links"}
+              to={"cssdetails/introduction"}
+            >
+              CSS
+            </NavLink>
           </span>
           <span>
-            <NavLink className={'footer_container_top_tutorials_links'}>JavaScript</NavLink>
+            <NavLink
+              className={"footer_container_top_tutorials_links"}
+              to={"learnJavaScript/introduction"}
+            >
+              JavaScript
+            </NavLink>
           </span>
           <span>
-            <NavLink className={'footer_container_top_tutorials_links'}>How To</NavLink>
+            <NavLink
+              className={"footer_container_top_tutorials_links"}
+              to={"Html/introduction"}
+            >
+              How To
+            </NavLink>
           </span>
           <span>
-            <NavLink className={'footer_container_top_tutorials_links'}>SQL</NavLink>
+            <NavLink
+              className={"footer_container_top_tutorials_links"}
+              to={"sql/introduction"}
+            >
+              SQL
+            </NavLink>
           </span>
           <span>
-            <NavLink className={'footer_container_top_tutorials_links'}>Phyton</NavLink>
+            <NavLink
+              className={"footer_container_top_tutorials_links"}
+              to={"phython/introduction"}
+            >
+              Phyton
+            </NavLink>
           </span>
           <span>
-            <NavLink className={'footer_container_top_tutorials_links'}>W3.CSS</NavLink>
+            <NavLink
+              className={"footer_container_top_tutorials_links"}
+              to={"BootstrapeComponentdetails/w3cssintroduction"}
+            >
+              W3.CSS
+            </NavLink>
           </span>
           <span>
-            <NavLink className={'footer_container_top_tutorials_links'}>BOOTSTRAPE</NavLink>
+            <NavLink
+              className={"footer_container_top_tutorials_links"}
+              to={"BootstrapeComponentdetails/bootstrapeintroduction"}
+            >
+              BOOTSTRAPE
+            </NavLink>
           </span>
           <span>
-            <NavLink className={'footer_container_top_tutorials_links'}>JAVA</NavLink>
+            <NavLink
+              className={"footer_container_top_tutorials_links"}
+              to={"Java/introduction"}
+            >
+              JAVA
+            </NavLink>
           </span>
           <span>
-            <NavLink className={'footer_container_top_tutorials_links'}>C++</NavLink>
+            <NavLink
+              className={"footer_container_top_tutorials_links"}
+              to={"C++/introduction"}
+            >
+              C++
+            </NavLink>
           </span>
         </div>
-        <div  style={{
+        <div
+          style={{
             gridColumn: "4/4",
-          }} className="footer_container_top_tutorials">
+          }}
+          className="footer_container_top_tutorials"
+        >
           <h2>Get Certifeid</h2>
           <span>
-            <NavLink className={'footer_container_top_tutorials_links'}>HTML</NavLink>
+            <NavLink
+              className={"footer_container_top_tutorials_links"}
+              to={"Html/introduction"}
+            >
+              HTML
+            </NavLink>
           </span>
           <span>
-            <NavLink className={'footer_container_top_tutorials_links'}>CSS</NavLink>
+            <NavLink
+              className={"footer_container_top_tutorials_links"}
+              to={"cssdetails/introduction"}
+            >
+              CSS
+            </NavLink>
           </span>
           <span>
-            <NavLink className={'footer_container_top_tutorials_links'}>JavaScript</NavLink>
+            <NavLink
+              className={"footer_container_top_tutorials_links"}
+              to={"learnJavaScript/introduction"}
+            >
+              JavaScript
+            </NavLink>
           </span>
           <span>
-            <NavLink className={'footer_container_top_tutorials_links'}>How To</NavLink>
+            <NavLink
+              className={"footer_container_top_tutorials_links"}
+              to={"Html/introduction"}
+            >
+              How To
+            </NavLink>
           </span>
           <span>
-            <NavLink className={'footer_container_top_tutorials_links'}>SQL</NavLink>
+            <NavLink
+              className={"footer_container_top_tutorials_links"}
+              to={"sql/introduction"}
+            >
+              SQL
+            </NavLink>
           </span>
           <span>
-            <NavLink className={'footer_container_top_tutorials_links'}>Phyton</NavLink>
+            <NavLink
+              className={"footer_container_top_tutorials_links"}
+              to={"phython/introduction"}
+            >
+              Phyton
+            </NavLink>
           </span>
           <span>
-            <NavLink className={'footer_container_top_tutorials_links'}>W3.CSS</NavLink>
+            <NavLink
+              className={"footer_container_top_tutorials_links"}
+              to={"BootstrapeComponentdetails/w3cssintroduction"}
+            >
+              W3.CSS
+            </NavLink>
           </span>
           <span>
-            <NavLink className={'footer_container_top_tutorials_links'}>BOOTSTRAPE</NavLink>
+            <NavLink
+              className={"footer_container_top_tutorials_links"}
+              to={"BootstrapeComponentdetails/bootstrapeintroduction"}
+            >
+              BOOTSTRAPE
+            </NavLink>
           </span>
           <span>
-            <NavLink className={'footer_container_top_tutorials_links'}>JAVA</NavLink>
+            <NavLink
+              className={"footer_container_top_tutorials_links"}
+              to={"Java/introduction"}
+            >
+              JAVA
+            </NavLink>
           </span>
           <span>
-            <NavLink className={'footer_container_top_tutorials_links'}>C++</NavLink>
+            <NavLink
+              className={"footer_container_top_tutorials_links"}
+              to={"C++/introduction"}
+            >
+              C++
+            </NavLink>
           </span>
         </div>
-        
       </div>
-      
+
       {/* Footer Ended */}
     </>
   );

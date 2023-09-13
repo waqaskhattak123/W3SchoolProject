@@ -1,52 +1,61 @@
 import React, { useState } from "react";
+import img from "../images/logo.jpg";
 import { Button } from "react-bootstrap";
+
 import { useParams, NavLink } from "react-router-dom";
 import NavBarCompo from "./NavBarCompo";
 
-const Details = () => {
-  const { htmlname } = useParams();
+const JavaCompo = () => {
+  const [isfocus, setIsFocus] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
+  const { Javaname } = useParams();
+  const handleFocus = () => {
+    setIsFocus(true);
+  };
+  const handleBlur = () => {
+    setIsFocus(false);
+  };
   return (
     <div>
-      {/* Navbar Started */}
+      {/* Header Started */}
     <NavBarCompo/>
-      {/* Navbar Ended */}
+      {/* Header Ended */}
       {/* sidebarStarted */}
       <div className="side_bar_contents">
-        <h5>Html Tutorials</h5>
+        <h5>Java Tutorials</h5>
 
-        <NavLink to={"/Html/introduction"}>Introduction</NavLink>
-        <NavLink to={"/Html/whereto"}>Where to</NavLink>
-        <NavLink to={"/Html/output"}>OutPut</NavLink>
-        <NavLink to={"/Html/statements"}>Statements</NavLink>
-        <NavLink to={"/Html/syntax"}>Syntax</NavLink>
-        <NavLink to={"/Html/comments"}>Comments</NavLink>
-        <NavLink to={"/Html/variables"}>Variables</NavLink>
-        <NavLink to={"/Html/let"}>Let</NavLink>
-        <NavLink to={"/Html/const"}>Const</NavLink>
-        <NavLink to={"/Html/operators"}>Operators</NavLink>
-        <NavLink to={"/Html/arithamatic"}>Arithmatic</NavLink>
-        <NavLink to={"/Html/assignment"}>Assignment</NavLink>
-        <NavLink to={"/Html/datatypes"}>Data Types</NavLink>
-        <NavLink to={"/Html/functions"}>Functions</NavLink>
-        <NavLink to={"/Html/objects"}>Objects</NavLink>
-        <NavLink to={"/Html/events"}>Events</NavLink>
-        <NavLink to={"/Html/strings"}>Strings</NavLink>
-        <NavLink to={"/Html/stringmethod"}>String Method</NavLink>
-        <NavLink to={"/Html/stringsearch"}>String Search</NavLink>
-        <NavLink to={"/Html/stringtemplates"}>String Templates</NavLink>
-        <NavLink to={"/Html/numbers"}>Numbers</NavLink>
-        <NavLink to={"/Html/bigint"}>BigInt</NavLink>
+        <NavLink to={"/Java/introduction"}>Introduction</NavLink>
+         <NavLink to={"/Java/whereto"}>Where to</NavLink>
+        <NavLink to={"/Java/output"}>OutPut</NavLink>
+        <NavLink to={"/Java/statements"}>Statements</NavLink>
+        <NavLink to={"/Java/syntax"}>Syntax</NavLink>
+        <NavLink to={"/Java/comments"}>Comments</NavLink>
+        <NavLink to={"/Java/variables"}>Variables</NavLink>
+        <NavLink to={"/Java/let"}>Let</NavLink>
+        <NavLink to={"/Java/const"}>Const</NavLink>
+        <NavLink to={"/Java/operators"}>Operators</NavLink>
+        <NavLink to={"/Java/arithamatic"}>Arithmatic</NavLink>
+        <NavLink to={"/Java/assignment"}>Assignment</NavLink>
+        <NavLink to={"/Java/datatypes"}>Data Types</NavLink>
+        <NavLink to={"/Java/functions"}>Functions</NavLink>
+        <NavLink to={"/Java/objects"}>Objects</NavLink>
+        <NavLink to={"/Java/events"}>Events</NavLink>
+        <NavLink to={"/Java/strings"}>Strings</NavLink>
+        <NavLink to={"/Java/stringmethod"}>String Method</NavLink>
+        <NavLink to={"/Java/stringsearch"}>String Search</NavLink>
+        <NavLink to={"/Java/stringtemplates"}>String Templates</NavLink>
+        <NavLink to={"/Java/numbers"}>Numbers</NavLink>
+        <NavLink to={"/Java/bigint"}>BigInt</NavLink>
       </div>
       {/*  */}
 
       {/* sidebar Ended */}
-
-      {/* htmlname introduction started */}
-      {htmlname === "introduction" && (
+      {/* Javaname introduction started */}
+      {Javaname === "introduction" && (
         <div className="html_wrapper_page">
           <div className="html_details_page_header">
-            <h1>Introduction to Html</h1>
+            <h1>Introduction to Java</h1>
 
             <div
               style={{
@@ -56,10 +65,10 @@ const Details = () => {
                 marginLeft: "30px",
               }}
             >
-              <NavLink to={"/Html/introduction"}>
+              <NavLink to={"/Java/introduction"}>
                 <Button>Back</Button>
               </NavLink>
-              <NavLink to={"/Html/whereto"}>
+              <NavLink to={"/Java/whereto"}>
                 <Button>Next</Button>
               </NavLink>
             </div>
@@ -67,24 +76,24 @@ const Details = () => {
             <div>
               <ul>
                 <p>
-                  htmlname (JS) is a lightweight interpreted (or just-in-time
+                  Javaname (JS) is a lightweight interpreted (or just-in-time
                   compiled) programming language with first-class functions.
                   While it is most well-known as the scripting language for Web
                   pages, many non-browser environments also use it, such as
-                  Node.js, Apache CouchDB and Adobe Acrobat. htmlname is a
+                  Node.js, Apache CouchDB and Adobe Acrobat. Javaname is a
                   prototype-based, multi-paradigm, single-threaded, dynamic
                   language, supporting object-oriented, imperative, and
-                  declarative (e.g. functional programming) styles. htmlname's
+                  declarative (e.g. functional programming) styles. Javaname's
                   dynamic capabilities include runtime object construction,
                   variable parameter lists, function variables, dynamic script
                   creation (via eval), object introspection (via for...in and
-                  Object utilities), and source-code recovery (htmlname
+                  Object utilities), and source-code recovery (Javaname
                   functions store their source text and can be retrieved through
-                  toString()). htmlname's dynamic capabilities include runtime
+                  toString()). Javaname's dynamic capabilities include runtime
                   object construction, variable parameter lists, function
                   variables, dynamic script creation (via eval), object
                   introspection (via for...in and Object utilities), and
-                  source-code recovery (htmlname functions store their source
+                  source-code recovery (Javaname functions store their source
                   text and can be retrieved through toString()).
                 </p>
               </ul>
@@ -118,15 +127,15 @@ const Details = () => {
               <h2>For complete beginners</h2>
               <ul>
                 <li>
-                  Head over to our Learning Area htmlname topic if you want to
-                  learn htmlname but have no previous experience with htmlname
-                  or programming. The complete modules available there are as
-                  follows:
+                  Head over to our Learning Area Javaname topic if you want to
+                  learn Javaname but have no previous experience with
+                  Javaname or programming. The complete modules available
+                  there are as follows:
                 </li>
               </ul>
-              <h2>htmlname guide</h2>
+              <h2>Javaname guide</h2>
               <p>
-                htmlname frameworks are an essential part of modern front-end
+                Javaname frameworks are an essential part of modern front-end
                 web development, providing developers with proven tools for
                 building scalable, interactive web applications. This module
                 gives you some fundamental background knowledge about how
@@ -146,11 +155,11 @@ const Details = () => {
       )}
       {/* Css introduction ended */}
 
-      {/* htmlname where to started */}
-      {htmlname === "whereto" && (
+      {/* Javaname where to started */}
+      {Javaname === "whereto" && (
         <div className="html_wrapper_page">
           <div className="html_details_page_header">
-            <h1>Html Functions and Events</h1>
+            <h1>Java Functions and Events</h1>
 
             <div
               style={{
@@ -160,10 +169,10 @@ const Details = () => {
                 marginLeft: "30px",
               }}
             >
-              <NavLink to={"/Html/introduction"}>
+              <NavLink to={"/Java/introduction"}>
                 <Button>Back</Button>
               </NavLink>
-              <NavLink to={"/Html/output"}>
+              <NavLink to={"/Java/output"}>
                 <Button>Next</Button>
               </NavLink>
             </div>
@@ -171,8 +180,8 @@ const Details = () => {
             <div>
               <ul>
                 <p>
-                  A htmlname function is a block of htmlname code, that can be
-                  executed when "called" for. For example, a function can be
+                  A Javaname function is a block of Javaname code, that can
+                  be executed when "called" for. For example, a function can be
                   called when an event occurs, like when the user clicks a
                   button. You will learn much more about functions and events in
                   later chapters..
@@ -184,11 +193,11 @@ const Details = () => {
       )}
       {/* Css whereto ended */}
 
-      {/* htmlname output to started */}
-      {htmlname === "output" && (
+      {/* Javaname output to started */}
+      {Javaname === "output" && (
         <div className="html_wrapper_page">
           <div className="html_details_page_header">
-            <h1>Html Display Possibilitiess</h1>
+            <h1>Java Display Possibilitiess</h1>
 
             <div
               style={{
@@ -198,10 +207,10 @@ const Details = () => {
                 marginLeft: "30px",
               }}
             >
-              <NavLink to={"/Html/whereto"}>
+              <NavLink to={"/Java/whereto"}>
                 <Button>Back</Button>
               </NavLink>
-              <NavLink to={"/Html/statements"}>
+              <NavLink to={"/Java/statements"}>
                 <Button>Next</Button>
               </NavLink>
             </div>
@@ -209,8 +218,8 @@ const Details = () => {
             <div>
               <ul>
                 <p>
-                  A htmlname function is a block of htmlname code, that can be
-                  executed when "called" for. For example, a function can be
+                  A Javaname function is a block of Javaname code, that can
+                  be executed when "called" for. For example, a function can be
                   called when an event occurs, like when the user clicks a
                   button. You will learn much more about functions and events in
                   later chapters..
@@ -222,11 +231,11 @@ const Details = () => {
       )}
       {/* Css whereto ended */}
 
-      {/* htmlname statements to started */}
-      {htmlname === "statements" && (
+      {/* Javaname statements to started */}
+      {Javaname === "statements" && (
         <div className="html_wrapper_page">
           <div className="html_details_page_header">
-            <h1>Html Programs</h1>
+            <h1>Java Programs</h1>
 
             <div
               style={{
@@ -236,10 +245,10 @@ const Details = () => {
                 marginLeft: "30px",
               }}
             >
-              <NavLink to={"/Html/output"}>
+              <NavLink to={"/Java/output"}>
                 <Button>Next</Button>
               </NavLink>
-              <NavLink to={"/Html/syntax"}>
+              <NavLink to={"/Java/syntax"}>
                 <Button>Next</Button>
               </NavLink>
             </div>
@@ -248,41 +257,42 @@ const Details = () => {
               <p>
                 A computer program is a list of "instructions" to be "executed"
                 by a computer. In a programming language, these programming
-                instructions are called statements. A htmlname program is a list
-                of programming statements. htmlname statements are composed of:
-                Values, Operators, Expressions, Keywords, and Comments. This
+                instructions are called statements. A Javaname program is a
+                list of programming statements. Javaname statements are
+                composed of: Values, Operators, Expressions, Keywords, and
+                Comments. This statement tells the browser to write "Hello
+                Dolly." inside an HTML element with Keywords, and Comments. This
                 statement tells the browser to write "Hello Dolly." inside an
-                HTML element with Keywords, and Comments. This statement tells
-                the browser to write "Hello Dolly." inside an HTML element with
-                id="demo":htmlname statements are composed of: Values,
-                Operators, Expressions, Keywords, and Comments. This statement
-                tells the browser to write "Hello Dolly." inside an HTML element
-                with id="demo":htmlname statements are composed of: Values,
-                Operators, Expressions, Keywords, and Comments. This statement
-                tells the browser to write "Hello Dolly." inside an HTML element
-                with id="demo":
+                HTML element with id="demo":Javaname statements are composed
+                of: Values, Operators, Expressions, Keywords, and Comments. This
+                statement tells the browser to write "Hello Dolly." inside an
+                HTML element with id="demo":Javaname statements are composed
+                of: Values, Operators, Expressions, Keywords, and Comments. This
+                statement tells the browser to write "Hello Dolly." inside an
+                HTML element with id="demo":
               </p>
             </div>
             <h2>Semicolons</h2>
             <p>
-              Semicolons separate htmlname statements. Add a semicolon at the
-              end of each executable statement: Examples htmlname ignores
+              Semicolons separate Javaname statements. Add a semicolon at the
+              end of each executable statement: Examples Javaname ignores
               multiple spaces. You can add white space to your script to make it
-              more readable. The following lines are equivalent:htmlname ignores
-              multiple spaces. You can add white space to your script to make it
-              more readable. The following lines are equivalent:htmlname ignores
-              multiple spaces. You can add white space to your script to make it
-              more readable. The following lines are equivalent:
+              more readable. The following lines are equivalent:Javaname
+              ignores multiple spaces. You can add white space to your script to
+              make it more readable. The following lines are
+              equivalent:Javaname ignores multiple spaces. You can add white
+              space to your script to make it more readable. The following lines
+              are equivalent:
             </p>
           </div>
         </div>
       )}
       {/* whereto ended */}
-      {/* htmlname Syntax to started */}
-      {htmlname === "syntax" && (
+      {/* Javaname Syntax to started */}
+      {Javaname === "syntax" && (
         <div className="html_wrapper_page">
           <div className="html_details_page_header">
-            <h1>Html Syntax</h1>
+            <h1>Java Syntax</h1>
 
             <div
               style={{
@@ -292,10 +302,10 @@ const Details = () => {
                 marginLeft: "30px",
               }}
             >
-              <NavLink to={"/Html/output"}>
+              <NavLink to={"/Java/output"}>
                 <Button>Back</Button>
               </NavLink>
-              <NavLink to={"/Html/comments"}>
+              <NavLink to={"/Java/comments"}>
                 <Button>Next</Button>
               </NavLink>
             </div>
@@ -303,18 +313,18 @@ const Details = () => {
               <p>
                 A computer program is a list of "instructions" to be "executed"
                 by a computer. In a programming language, these programming
-                instructions are called statements. A htmlname program is a list
-                of programming statements. htmlname statements are composed of:
-                Values, Operators, Expressions, Keywords, and Comments. This
+                instructions are called statements. A Javaname program is a
+                list of programming statements. Javaname statements are
+                composed of: Values, Operators, Expressions, Keywords, and
+                Comments. This statement tells the browser to write "Hello
+                Dolly." inside an HTML element with Keywords, and Comments. This
                 statement tells the browser to write "Hello Dolly." inside an
-                HTML element with Keywords, and Comments. This statement tells
-                the browser to write "Hello Dolly." inside an HTML element with
-                id="demo":htmlname statements are composed
+                HTML element with id="demo":Javaname statements are composed
                 <h2>Lorem Ipsum Headings</h2>
                 of: Values, Operators, Expressions, Keywords, and Comments. This
                 statement tells the browser to write "Hello Dolly." inside an
-                HTML element with id="demo":htmlname statements are composed of:
-                Values, Operators, Expressions, Keywords, and Comments. This
+                HTML element with id="demo":Javaname statements are composed
+                of: Values, Operators, Expressions, Keywords, and Comments. This
                 statement tells the browser to write "Hello Dolly." inside an
                 HTML element with id="demo":
               </p>
@@ -322,11 +332,11 @@ const Details = () => {
           </div>
         </div>
       )}
-      {/* htmlname comments ended */}
-      {htmlname === "comments" && (
+      {/* Javaname comments ended */}
+      {Javaname === "comments" && (
         <div className="html_wrapper_page">
           <div className="html_details_page_header">
-            <h1>Html Comments</h1>
+            <h1>Java Comments</h1>
 
             <div
               style={{
@@ -336,10 +346,10 @@ const Details = () => {
                 marginLeft: "30px",
               }}
             >
-              <NavLink to={"/Html/syntax"}>
+              <NavLink to={"/Java/syntax"}>
                 <Button>Back</Button>
               </NavLink>
-              <NavLink to={"/Html/variables"}>
+              <NavLink to={"/Java/variables"}>
                 <Button>Next</Button>
               </NavLink>
             </div>
@@ -347,64 +357,18 @@ const Details = () => {
               <p>
                 A computer program is a list of "instructions" to be "executed"
                 by a computer. In a programming language, these programming
-                instructions are called statements. A htmlname program is a list
-                of programming statements. htmlname statements are composed of:
-                Values, Operators, Expressions, Keywords, and Comments. This
+                instructions are called statements. A Javaname program is a
+                list of programming statements. Javaname statements are
+                composed of: Values, Operators, Expressions, Keywords, and
+                Comments. This statement tells the browser to write "Hello
+                Dolly." inside an HTML element with Keywords, and Comments. This
                 statement tells the browser to write "Hello Dolly." inside an
-                HTML element with Keywords, and Comments. This statement tells
-                the browser to write "Hello Dolly." inside an HTML element with
-                id="demo":htmlname statements are composed
+                HTML element with id="demo":Javaname statements are composed
                 <h2>Lorem Ipsum Headings</h2>
                 of: Values, Operators, Expressions, Keywords, and Comments. This
                 statement tells the browser to write "Hello Dolly." inside an
-                HTML element with id="demo":htmlname statements are composed of:
-                Values, Operators, Expressions, Keywords, and Comments. This
-                statement tells the browser to write "Hello Dolly." inside an
-                HTML element with id="demo":
-              </p>
-            </div>
-          </div>
-        </div>
-      )}
-      {/* Javscript comments ended */}
-
-      {/* htmlname variables ended */}
-      {htmlname === "variables" && (
-        <div className="html_wrapper_page">
-          <div className="html_details_page_header">
-            <h1>Html Variables</h1>
-
-            <div
-              style={{
-                display: "flex",
-                width: "60%",
-                justifyContent: "space-between",
-                marginLeft: "30px",
-              }}
-            >
-              <NavLink to={"/Html/comments"}>
-                <Button>Back</Button>
-              </NavLink>
-              <NavLink to={"/Html/let"}>
-                <Button>Next</Button>
-              </NavLink>
-            </div>
-            <div>
-              <p>
-                A computer program is a list of "instructions" to be "executed"
-                by a computer. In a programming language, these programming
-                instructions are called statements. A htmlname program is a list
-                of programming statements. htmlname statements are composed of:
-                Values, Operators, Expressions, Keywords, and Comments. This
-                statement tells the browser to write "Hello Dolly." inside an
-                HTML element with Keywords, and Comments. This statement tells
-                the browser to write "Hello Dolly." inside an HTML element with
-                id="demo":htmlname statements are composed
-                <h2>Lorem Ipsum Headings</h2>
+                HTML element with id="demo":Javaname statements are composed
                 of: Values, Operators, Expressions, Keywords, and Comments. This
-                statement tells the browser to write "Hello Dolly." inside an
-                HTML element with id="demo":htmlname statements are composed of:
-                Values, Operators, Expressions, Keywords, and Comments. This
                 statement tells the browser to write "Hello Dolly." inside an
                 HTML element with id="demo":
               </p>
@@ -414,11 +378,11 @@ const Details = () => {
       )}
       {/* Javscript comments ended */}
 
-      {/* htmlname let started */}
-      {htmlname === "let" && (
+      {/* Javaname variables ended */}
+      {Javaname === "variables" && (
         <div className="html_wrapper_page">
           <div className="html_details_page_header">
-            <h1>Html Let</h1>
+            <h1>Java Variables</h1>
 
             <div
               style={{
@@ -428,10 +392,56 @@ const Details = () => {
                 marginLeft: "30px",
               }}
             >
-              <NavLink to={"/Html/variables"}>
+              <NavLink to={"/Java/comments"}>
                 <Button>Back</Button>
               </NavLink>
-              <NavLink to={"/Html/const"}>
+              <NavLink to={"/Java/let"}>
+                <Button>Next</Button>
+              </NavLink>
+            </div>
+            <div>
+              <p>
+                A computer program is a list of "instructions" to be "executed"
+                by a computer. In a programming language, these programming
+                instructions are called statements. A Javaname program is a
+                list of programming statements. Javaname statements are
+                composed of: Values, Operators, Expressions, Keywords, and
+                Comments. This statement tells the browser to write "Hello
+                Dolly." inside an HTML element with Keywords, and Comments. This
+                statement tells the browser to write "Hello Dolly." inside an
+                HTML element with id="demo":Javaname statements are composed
+                <h2>Lorem Ipsum Headings</h2>
+                of: Values, Operators, Expressions, Keywords, and Comments. This
+                statement tells the browser to write "Hello Dolly." inside an
+                HTML element with id="demo":Javaname statements are composed
+                of: Values, Operators, Expressions, Keywords, and Comments. This
+                statement tells the browser to write "Hello Dolly." inside an
+                HTML element with id="demo":
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
+      {/* Javscript comments ended */}
+
+      {/* Javaname let started */}
+      {Javaname === "let" && (
+        <div className="html_wrapper_page">
+          <div className="html_details_page_header">
+            <h1>Java Let</h1>
+
+            <div
+              style={{
+                display: "flex",
+                width: "60%",
+                justifyContent: "space-between",
+                marginLeft: "30px",
+              }}
+            >
+              <NavLink to={"/Java/variables"}>
+                <Button>Back</Button>
+              </NavLink>
+              <NavLink to={"/Java/const"}>
                 <Button>Next</Button>
               </NavLink>
             </div>
@@ -440,11 +450,11 @@ const Details = () => {
       )}
       {/* Javscript comments ended */}
 
-      {/* htmlname const started */}
-      {htmlname === "const" && (
+      {/* Javaname const started */}
+      {Javaname === "const" && (
         <div className="html_wrapper_page">
           <div className="html_details_page_header">
-            <h1>Html Const</h1>
+            <h1>Java Const</h1>
 
             <div
               style={{
@@ -454,10 +464,10 @@ const Details = () => {
                 marginLeft: "30px",
               }}
             >
-              <NavLink to={"/Html/let"}>
+              <NavLink to={"/Java/let"}>
                 <Button>Back</Button>
               </NavLink>
-              <NavLink to={"/Html/operators"}>
+              <NavLink to={"/Java/operators"}>
                 <Button>Next</Button>
               </NavLink>
             </div>
@@ -466,11 +476,11 @@ const Details = () => {
       )}
       {/* Javscript comments ended */}
 
-      {/* htmlname const started */}
-      {htmlname === "operators" && (
+      {/* Javaname const started */}
+      {Javaname === "operators" && (
         <div className="html_wrapper_page">
           <div className="html_details_page_header">
-            <h1>Html Const</h1>
+            <h1>Java Const</h1>
 
             <div
               style={{
@@ -480,10 +490,10 @@ const Details = () => {
                 marginLeft: "30px",
               }}
             >
-              <NavLink to={"/Html/let"}>
+              <NavLink to={"/Java/let"}>
                 <Button>Back</Button>
               </NavLink>
-              <NavLink to={"/Html/arithamatic"}>
+              <NavLink to={"/Java/arithamatic"}>
                 <Button>Next</Button>
               </NavLink>
             </div>
@@ -491,11 +501,11 @@ const Details = () => {
         </div>
       )}
       {/* Javscript comments ended */}
-      {/* htmlname arithmatic started */}
-      {htmlname === "arithamatic" && (
+      {/* Javaname arithmatic started */}
+      {Javaname === "arithamatic" && (
         <div className="html_wrapper_page">
           <div className="html_details_page_header">
-            <h1>Html Arithmatic</h1>
+            <h1>Java Arithmatic</h1>
 
             <div
               style={{
@@ -505,10 +515,10 @@ const Details = () => {
                 marginLeft: "30px",
               }}
             >
-              <NavLink to={"/Html/operators"}>
+              <NavLink to={"/Java/operators"}>
                 <Button>Back</Button>
               </NavLink>
-              <NavLink to={"/Html/assignment"}>
+              <NavLink to={"/Java/assignment"}>
                 <Button>Next</Button>
               </NavLink>
             </div>
@@ -517,11 +527,11 @@ const Details = () => {
       )}
       {/* Javscript arithmatic ended */}
 
-      {/* htmlname assigment started */}
-      {htmlname === "assignment" && (
+      {/* Javaname assigment started */}
+      {Javaname === "assignment" && (
         <div className="html_wrapper_page">
           <div className="html_details_page_header">
-            <h1>Html Assignment</h1>
+            <h1>Java Assignment</h1>
 
             <div
               style={{
@@ -531,10 +541,10 @@ const Details = () => {
                 marginLeft: "30px",
               }}
             >
-              <NavLink to={"/Html/arithmatic"}>
+              <NavLink to={"/Java/arithmatic"}>
                 <Button>Back</Button>
               </NavLink>
-              <NavLink to={"/Html/datatypes"}>
+              <NavLink to={"/Java/datatypes"}>
                 <Button>Next</Button>
               </NavLink>
             </div>
@@ -543,11 +553,11 @@ const Details = () => {
       )}
       {/* Javscript arithmatic ended */}
 
-      {/* htmlname datatypes started */}
-      {htmlname === "datatypes" && (
+      {/* Javaname datatypes started */}
+      {Javaname === "datatypes" && (
         <div className="html_wrapper_page">
           <div className="html_details_page_header">
-            <h1>Html Data Types</h1>
+            <h1>Java Data Types</h1>
 
             <div
               style={{
@@ -557,10 +567,10 @@ const Details = () => {
                 marginLeft: "30px",
               }}
             >
-              <NavLink to={"/Html/assignment"}>
+              <NavLink to={"/Java/assignment"}>
                 <Button>Back</Button>
               </NavLink>
-              <NavLink to={"/Html/functions"}>
+              <NavLink to={"/Java/functions"}>
                 <Button>Next</Button>
               </NavLink>
             </div>
@@ -569,11 +579,11 @@ const Details = () => {
       )}
       {/* Javscript dattypes ended */}
 
-      {/* htmlname datatypes started */}
-      {htmlname === "functions" && (
+      {/* Javaname datatypes started */}
+      {Javaname === "functions" && (
         <div className="html_wrapper_page">
           <div className="html_details_page_header">
-            <h1>Html Functions</h1>
+            <h1>Java Functions</h1>
 
             <div
               style={{
@@ -583,10 +593,10 @@ const Details = () => {
                 marginLeft: "30px",
               }}
             >
-              <NavLink to={"/Html/datatypes"}>
+              <NavLink to={"/Java/datatypes"}>
                 <Button>Back</Button>
               </NavLink>
-              <NavLink to={"/Html/objects"}>
+              <NavLink to={"/Java/objects"}>
                 <Button>Next</Button>
               </NavLink>
             </div>
@@ -595,11 +605,11 @@ const Details = () => {
       )}
       {/* Javscript dattypes ended */}
 
-      {/* htmlname objects started */}
-      {htmlname === "objects" && (
+      {/* Javaname objects started */}
+      {Javaname === "objects" && (
         <div className="html_wrapper_page">
           <div className="html_details_page_header">
-            <h1>Html Objects</h1>
+            <h1>Java Objects</h1>
 
             <div
               style={{
@@ -609,10 +619,10 @@ const Details = () => {
                 marginLeft: "30px",
               }}
             >
-              <NavLink to={"/Html/functions"}>
+              <NavLink to={"/Java/functions"}>
                 <Button>Back</Button>
               </NavLink>
-              <NavLink to={"/Html/events"}>
+              <NavLink to={"/Java/events"}>
                 <Button>Next</Button>
               </NavLink>
             </div>
@@ -621,11 +631,11 @@ const Details = () => {
       )}
       {/* Javscript dattypes ended */}
 
-      {/* htmlname events started */}
-      {htmlname === "events" && (
+      {/* Javaname events started */}
+      {Javaname === "events" && (
         <div className="html_wrapper_page">
           <div className="html_details_page_header">
-            <h1>Html Events</h1>
+            <h1>Java Events</h1>
 
             <div
               style={{
@@ -635,10 +645,10 @@ const Details = () => {
                 marginLeft: "30px",
               }}
             >
-              <NavLink to={"/Html/objects"}>
+              <NavLink to={"/Java/objects"}>
                 <Button>Back</Button>
               </NavLink>
-              <NavLink to={"/Html/strings"}>
+              <NavLink to={"/Java/strings"}>
                 <Button>Next</Button>
               </NavLink>
             </div>
@@ -648,10 +658,10 @@ const Details = () => {
       {/* Javscript events ended */}
 
       {/*  */}
-      {htmlname === "strings" && (
+      {Javaname === "strings" && (
         <div className="html_wrapper_page">
           <div className="html_details_page_header">
-            <h1>Html Strings</h1>
+            <h1>Java Strings</h1>
 
             <div
               style={{
@@ -661,10 +671,62 @@ const Details = () => {
                 marginLeft: "30px",
               }}
             >
-              <NavLink to={"/Html/events"}>
+              <NavLink to={"/Java/events"}>
                 <Button>Back</Button>
               </NavLink>
-              <NavLink to={"/Html/stringmethod"}>
+              <NavLink to={"/Java/stringmethod"}>
+                <Button>Next</Button>
+              </NavLink>
+            </div>
+          </div>
+        </div>
+      )}
+      {/*  */}
+
+        {/*  */}
+        {Javaname === "stringmethod" && (
+        <div className="html_wrapper_page">
+          <div className="html_details_page_header">
+            <h1>Java Methods</h1>
+
+            <div
+              style={{
+                display: "flex",
+                width: "60%",
+                justifyContent: "space-between",
+                marginLeft: "30px",
+              }}
+            >
+              <NavLink to={"/Java/strings"}>
+                <Button>Back</Button>
+              </NavLink>
+              <NavLink to={"/Java/stringsearch"}>
+                <Button>Next</Button>
+              </NavLink>
+            </div>
+          </div>
+        </div>
+      )}
+      {/*  */}
+
+       {/*  */}
+       {Javaname === "stringsearch" && (
+        <div className="html_wrapper_page">
+          <div className="html_details_page_header">
+            <h1>Java Search</h1>
+
+            <div
+              style={{
+                display: "flex",
+                width: "60%",
+                justifyContent: "space-between",
+                marginLeft: "30px",
+              }}
+            >
+              <NavLink to={"/Java/stringmethod"}>
+                <Button>Back</Button>
+              </NavLink>
+              <NavLink to={"/Java/stringtemplates"}>
                 <Button>Next</Button>
               </NavLink>
             </div>
@@ -674,10 +736,10 @@ const Details = () => {
       {/*  */}
 
       {/*  */}
-      {htmlname === "stringmethod" && (
+      {Javaname === "stringtemplates" && (
         <div className="html_wrapper_page">
           <div className="html_details_page_header">
-            <h1>Html Methods</h1>
+            <h1>Java Templates</h1>
 
             <div
               style={{
@@ -687,10 +749,10 @@ const Details = () => {
                 marginLeft: "30px",
               }}
             >
-              <NavLink to={"/Html/strings"}>
+              <NavLink to={"/Java/stringsearch"}>
                 <Button>Back</Button>
               </NavLink>
-              <NavLink to={"/Html/stringsearch"}>
+              <NavLink to={"/Java/numbers"}>
                 <Button>Next</Button>
               </NavLink>
             </div>
@@ -699,11 +761,11 @@ const Details = () => {
       )}
       {/*  */}
 
-      {/*  */}
-      {htmlname === "stringsearch" && (
+       {/*  */}
+       {Javaname === "numbers" && (
         <div className="html_wrapper_page">
           <div className="html_details_page_header">
-            <h1>Html Search</h1>
+            <h1>Java Numbers</h1>
 
             <div
               style={{
@@ -713,10 +775,10 @@ const Details = () => {
                 marginLeft: "30px",
               }}
             >
-              <NavLink to={"/Html/stringmethod"}>
+              <NavLink to={"/Java/stringtemplates"}>
                 <Button>Back</Button>
               </NavLink>
-              <NavLink to={"/Html/stringtemplates"}>
+              <NavLink to={"/Java/bigint"}>
                 <Button>Next</Button>
               </NavLink>
             </div>
@@ -724,12 +786,11 @@ const Details = () => {
         </div>
       )}
       {/*  */}
-
-      {/*  */}
-      {htmlname === "stringtemplates" && (
+        {/*  */}
+        {Javaname === "bigint" && (
         <div className="html_wrapper_page">
           <div className="html_details_page_header">
-            <h1>Html Templates</h1>
+            <h1>Java BigInt</h1>
 
             <div
               style={{
@@ -739,61 +800,10 @@ const Details = () => {
                 marginLeft: "30px",
               }}
             >
-              <NavLink to={"/Html/stringsearch"}>
+              <NavLink to={"/Java/numbers"}>
                 <Button>Back</Button>
               </NavLink>
-              <NavLink to={"/Html/numbers"}>
-                <Button>Next</Button>
-              </NavLink>
-            </div>
-          </div>
-        </div>
-      )}
-      {/*  */}
-
-      {/*  */}
-      {htmlname === "numbers" && (
-        <div className="html_wrapper_page">
-          <div className="html_details_page_header">
-            <h1>Html Numbers</h1>
-
-            <div
-              style={{
-                display: "flex",
-                width: "60%",
-                justifyContent: "space-between",
-                marginLeft: "30px",
-              }}
-            >
-              <NavLink to={"/Html/stringtemplates"}>
-                <Button>Back</Button>
-              </NavLink>
-              <NavLink to={"/Html/bigint"}>
-                <Button>Next</Button>
-              </NavLink>
-            </div>
-          </div>
-        </div>
-      )}
-      {/*  */}
-      {/*  */}
-      {htmlname === "bigint" && (
-        <div className="html_wrapper_page">
-          <div className="html_details_page_header">
-            <h1>Html BigInt</h1>
-
-            <div
-              style={{
-                display: "flex",
-                width: "60%",
-                justifyContent: "space-between",
-                marginLeft: "30px",
-              }}
-            >
-              <NavLink to={"/Html/numbers"}>
-                <Button>Back</Button>
-              </NavLink>
-              <NavLink to={"/Html/introduction"}>
+              <NavLink to={"/Java/introduction"}>
                 <Button>Go To Top</Button>
               </NavLink>
             </div>
@@ -805,16 +815,17 @@ const Details = () => {
         <p>
           A computer program is a list of "instructions" to be "executed" by a
           computer. In a programming language, these programming instructions
-          are called statements. A htmlname program is a list of programming
-          statements. htmlname statements are composed of: Values, Operators,
+          are called statements. A Javaname program is a list of programming
+          statements. Javaname statements are composed of: Values, Operators,
           Expressions, Keywords, and Comments. This statement tells the browser
           to write "Hello Dolly." inside an HTML element with Keywords, and
           Comments. This statement tells the browser to write "Hello Dolly."
-          inside an HTML element with id="demo":htmlname statements are composed
+          inside an HTML element with id="demo":Javaname statements are
+          composed
           <h2>Lorem Ipsum Headings</h2>
           of: Values, Operators, Expressions, Keywords, and Comments. This
           statement tells the browser to write "Hello Dolly." inside an HTML
-          element with id="demo":htmlname statements are composed of: Values,
+          element with id="demo":Javaname statements are composed of: Values,
           Operators, Expressions, Keywords, and Comments. This statement tells
           the browser to write "Hello Dolly." inside an HTML element with
           id="demo":
@@ -824,4 +835,4 @@ const Details = () => {
     </div>
   );
 };
-export default Details;
+export default JavaCompo;

@@ -1,47 +1,33 @@
-.container {
+.uppernavbarone {
+  display: flex;
   width: 100%;
-  height: auto;
-  display: grid;
-  grid-template-columns: repeat(10, minmax(90px, 100px));
-  grid-template-rows: repeat(1, minmax(auto-fit, auto-fit));
-  padding-top: 5px;
-  grid-column-gap: 40px;
-  margin-top: 0px;
+  height: 60px;
+  position: fixed;
+  z-index: 1;
+  justify-content: space-between;
+  background-color: whitesmoke;
 }
-.container span {
+
+.uppernavbarone a {
   text-decoration: none;
   color: black;
   font-size: large;
   padding: 5px;
 }
-.container span:hover {
-  background-color: rgb(20, 201, 20);
-  background-size: cover;
-}
-.second-div {
-  background-color: black;
-  color: white;
-  font-size:15px;
-  display: grid;
-  grid-template-columns: repeat(18, minmax(70px, 200px));
-  grid-template-rows: repeat(2, minmax(auto-fit, auto-fit));
-  width: 99.9%;
-  /* grid-column-gap: 20px; */
-  height: auto;
-  padding-top: 10px;
-}
-.second_div_Two {
+
+.learn_to_code {
   padding-left: 330px;
   background-color: black;
   color: white;
   height: 500px;
   display: grid;
+  margin-top: 2 0px;
   grid-template-columns: repeat(1, minmax(70px, auto));
   grid-template-rows: repeat(1, minmax(10px, auto));
 }
-.second_div_Two h1 {
-  margin: 0px 0 -20px 0 !important;
-  padding-top: 60px;
+.learn_to_code h1 {
+  margin: 0px 0 -20px 0;
+  padding-top: 80px;
   font-size: 56px;
 }
 
@@ -89,6 +75,7 @@
   grid-row-gap: 10px;
   color: wheat;
   grid-column-start: 2;
+  z-index: 1;
 }
 .under_tutorials_span {
   font-size: smaller;
@@ -128,37 +115,99 @@
   padding-left: 100px;
   background-color: #ffc0c7;
 }
-.social_media{
+.social_media {
   width: 50%;
   height: 150px;
   margin-left: 500px;
   margin-top: 70px;
 }
-.footer_container{
- 
+.footer_container {
   display: grid;
   grid-template-columns: repeat(4, minmax(70px, auto-fit));
   grid-template-rows: repeat(auto-fit, minmax(30px, 20px));
   grid-gap: 10px;
 }
-.footer_container_top_tutorials{
+.footer_container_top_tutorials {
   display: grid;
   grid-template-columns: repeat(1, minmax(auto-fit, 1fr));
   grid-template-rows: repeat(auto-fit, minmax(auto-fit, 1fr));
   grid-column: 1/1;
   padding-left: 40px;
-  
 }
-.footer_container_top_tutorials_links{
+.footer_container_top_tutorials_links {
   text-decoration: none;
   color: black;
 }
-.html_details_page{
-  background-color: aqua;
+.html_wrapper_page {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(1fr, auto-fit));
+  grid-template-rows: repeat(auto-fit, minmax(1fr, 1fr));
+}
+.side_bar_contents {
+  width: 170px;
+  height: 580px;
+  background-color: whitesmoke;
+  margin-top: 60px;
+  padding-top: 10px;
+  padding-left: 10px;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(10px, auto-fit));
+  grid-template-rows: repeat(auto-fit, minmax(10px, auto-fit));
+  grid-row-start: 1;
+  overflow: auto;
+  position: fixed;
+}
+.side_bar_contents a {
+  text-decoration: none;
+  color: black;
 }
 
-
-
-
-
-
+.html_details_page_header {
+  width: 400px;
+  height: auto;
+  display: grid;
+  margin-top: 90px;
+  grid-template-columns: 1000px;
+  grid-template-rows: repeat(1, minmax(10px, auto-fit));
+  grid-column: 2/2;
+  grid-column: span 2;
+  padding-left: 190px;
+}
+.html_details_page_header > div  li{
+  background-color:white;
+  margin-top: 20px;
+  padding: 20px;
+  font-size: 20px;
+  justify-content: center;
+}
+.html_details_page_header > div p{
+  background-color:white;
+  margin-top: 20px;
+  padding: 20px;
+  font-size: 20px;
+  justify-content: center;
+}
+@media screen and (max-width: 768px) {
+  .html_details_page_header {
+    grid-template-columns: 1fr;
+  }
+}
+.introduction.active{
+  background-color: green;
+  color: white;
+}
+.side_bar_contents a.active{
+  background-color: green;
+  color: white;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+div p{
+  background-color:white;
+  margin-top: 0px;
+  padding: 20px;
+  width: 100%;
+  padding-left: 200px;
+  font-size: 20px;
+  justify-content: center;
+}

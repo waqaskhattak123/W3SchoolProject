@@ -1,52 +1,60 @@
 import React, { useState } from "react";
-import { Button } from "react-bootstrap";
+import { Button, Navbar } from "react-bootstrap";
 import { useParams, NavLink } from "react-router-dom";
 import NavBarCompo from "./NavBarCompo";
 
-const Details = () => {
-  const { htmlname } = useParams();
+const PhpCompo = () => {
+  const [isfocus, setIsFocus] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
+  const { Phpname } = useParams();
+
+  const handleFocus = () => {
+    setIsFocus(true);
+  };
+  const handleBlur = () => {
+    setIsFocus(false);
+  };
   return (
     <div>
-      {/* Navbar Started */}
-    <NavBarCompo/>
-      {/* Navbar Ended */}
+      {/* Header Started */}
+      <NavBarCompo/>
+      {/* Header Ended */}
       {/* sidebarStarted */}
       <div className="side_bar_contents">
-        <h5>Html Tutorials</h5>
+        <h5>Php Tutorials</h5>
 
-        <NavLink to={"/Html/introduction"}>Introduction</NavLink>
-        <NavLink to={"/Html/whereto"}>Where to</NavLink>
-        <NavLink to={"/Html/output"}>OutPut</NavLink>
-        <NavLink to={"/Html/statements"}>Statements</NavLink>
-        <NavLink to={"/Html/syntax"}>Syntax</NavLink>
-        <NavLink to={"/Html/comments"}>Comments</NavLink>
-        <NavLink to={"/Html/variables"}>Variables</NavLink>
-        <NavLink to={"/Html/let"}>Let</NavLink>
-        <NavLink to={"/Html/const"}>Const</NavLink>
-        <NavLink to={"/Html/operators"}>Operators</NavLink>
-        <NavLink to={"/Html/arithamatic"}>Arithmatic</NavLink>
-        <NavLink to={"/Html/assignment"}>Assignment</NavLink>
-        <NavLink to={"/Html/datatypes"}>Data Types</NavLink>
-        <NavLink to={"/Html/functions"}>Functions</NavLink>
-        <NavLink to={"/Html/objects"}>Objects</NavLink>
-        <NavLink to={"/Html/events"}>Events</NavLink>
-        <NavLink to={"/Html/strings"}>Strings</NavLink>
-        <NavLink to={"/Html/stringmethod"}>String Method</NavLink>
-        <NavLink to={"/Html/stringsearch"}>String Search</NavLink>
-        <NavLink to={"/Html/stringtemplates"}>String Templates</NavLink>
-        <NavLink to={"/Html/numbers"}>Numbers</NavLink>
-        <NavLink to={"/Html/bigint"}>BigInt</NavLink>
+        <NavLink to={"/Php/introduction"}>Introduction</NavLink>
+         <NavLink to={"/Php/whereto"}>Where to</NavLink>
+        <NavLink to={"/Php/output"}>OutPut</NavLink>
+        <NavLink to={"/Php/statements"}>Statements</NavLink>
+        <NavLink to={"/Php/syntax"}>Syntax</NavLink>
+        <NavLink to={"/Php/comments"}>Comments</NavLink>
+        <NavLink to={"/Php/variables"}>Variables</NavLink>
+        <NavLink to={"/Php/let"}>Let</NavLink>
+        <NavLink to={"/Php/const"}>Const</NavLink>
+        <NavLink to={"/Php/operators"}>Operators</NavLink>
+        <NavLink to={"/Php/arithamatic"}>Arithmatic</NavLink>
+        <NavLink to={"/Php/assignment"}>Assignment</NavLink>
+        <NavLink to={"/Php/datatypes"}>Data Types</NavLink>
+        <NavLink to={"/Php/functions"}>Functions</NavLink>
+        <NavLink to={"/Php/objects"}>Objects</NavLink>
+        <NavLink to={"/Php/events"}>Events</NavLink>
+        <NavLink to={"/Php/strings"}>Strings</NavLink>
+        <NavLink to={"/Php/stringmethod"}>String Method</NavLink>
+        <NavLink to={"/Php/stringsearch"}>String Search</NavLink>
+        <NavLink to={"/Php/stringtemplates"}>String Templates</NavLink>
+        <NavLink to={"/Php/numbers"}>Numbers</NavLink>
+        <NavLink to={"/Php/bigint"}>BigInt</NavLink>
       </div>
       {/*  */}
 
       {/* sidebar Ended */}
-
-      {/* htmlname introduction started */}
-      {htmlname === "introduction" && (
+      {/* Phpname introduction started */}
+      {Phpname === "introduction" && (
         <div className="html_wrapper_page">
           <div className="html_details_page_header">
-            <h1>Introduction to Html</h1>
+            <h1>Introduction to Php</h1>
 
             <div
               style={{
@@ -56,10 +64,10 @@ const Details = () => {
                 marginLeft: "30px",
               }}
             >
-              <NavLink to={"/Html/introduction"}>
+              <NavLink to={"/Php/introduction"}>
                 <Button>Back</Button>
               </NavLink>
-              <NavLink to={"/Html/whereto"}>
+              <NavLink to={"/Php/whereto"}>
                 <Button>Next</Button>
               </NavLink>
             </div>
@@ -67,24 +75,24 @@ const Details = () => {
             <div>
               <ul>
                 <p>
-                  htmlname (JS) is a lightweight interpreted (or just-in-time
+                  Phpname (JS) is a lightweight interpreted (or just-in-time
                   compiled) programming language with first-class functions.
                   While it is most well-known as the scripting language for Web
                   pages, many non-browser environments also use it, such as
-                  Node.js, Apache CouchDB and Adobe Acrobat. htmlname is a
+                  Node.js, Apache CouchDB and Adobe Acrobat. Phpname is a
                   prototype-based, multi-paradigm, single-threaded, dynamic
                   language, supporting object-oriented, imperative, and
-                  declarative (e.g. functional programming) styles. htmlname's
+                  declarative (e.g. functional programming) styles. Phpname's
                   dynamic capabilities include runtime object construction,
                   variable parameter lists, function variables, dynamic script
                   creation (via eval), object introspection (via for...in and
-                  Object utilities), and source-code recovery (htmlname
+                  Object utilities), and source-code recovery (Phpname
                   functions store their source text and can be retrieved through
-                  toString()). htmlname's dynamic capabilities include runtime
+                  toString()). Phpname's dynamic capabilities include runtime
                   object construction, variable parameter lists, function
                   variables, dynamic script creation (via eval), object
                   introspection (via for...in and Object utilities), and
-                  source-code recovery (htmlname functions store their source
+                  source-code recovery (Phpname functions store their source
                   text and can be retrieved through toString()).
                 </p>
               </ul>
@@ -118,15 +126,15 @@ const Details = () => {
               <h2>For complete beginners</h2>
               <ul>
                 <li>
-                  Head over to our Learning Area htmlname topic if you want to
-                  learn htmlname but have no previous experience with htmlname
-                  or programming. The complete modules available there are as
-                  follows:
+                  Head over to our Learning Area Phpname topic if you want to
+                  learn Phpname but have no previous experience with
+                  Phpname or programming. The complete modules available
+                  there are as follows:
                 </li>
               </ul>
-              <h2>htmlname guide</h2>
+              <h2>Phpname guide</h2>
               <p>
-                htmlname frameworks are an essential part of modern front-end
+                Phpname frameworks are an essential part of modern front-end
                 web development, providing developers with proven tools for
                 building scalable, interactive web applications. This module
                 gives you some fundamental background knowledge about how
@@ -146,11 +154,11 @@ const Details = () => {
       )}
       {/* Css introduction ended */}
 
-      {/* htmlname where to started */}
-      {htmlname === "whereto" && (
+      {/* Phpname where to started */}
+      {Phpname === "whereto" && (
         <div className="html_wrapper_page">
           <div className="html_details_page_header">
-            <h1>Html Functions and Events</h1>
+            <h1>Php Functions and Events</h1>
 
             <div
               style={{
@@ -160,10 +168,10 @@ const Details = () => {
                 marginLeft: "30px",
               }}
             >
-              <NavLink to={"/Html/introduction"}>
+              <NavLink to={"/Php/introduction"}>
                 <Button>Back</Button>
               </NavLink>
-              <NavLink to={"/Html/output"}>
+              <NavLink to={"/Php/output"}>
                 <Button>Next</Button>
               </NavLink>
             </div>
@@ -171,8 +179,8 @@ const Details = () => {
             <div>
               <ul>
                 <p>
-                  A htmlname function is a block of htmlname code, that can be
-                  executed when "called" for. For example, a function can be
+                  A Phpname function is a block of Phpname code, that can
+                  be executed when "called" for. For example, a function can be
                   called when an event occurs, like when the user clicks a
                   button. You will learn much more about functions and events in
                   later chapters..
@@ -184,11 +192,11 @@ const Details = () => {
       )}
       {/* Css whereto ended */}
 
-      {/* htmlname output to started */}
-      {htmlname === "output" && (
+      {/* Phpname output to started */}
+      {Phpname === "output" && (
         <div className="html_wrapper_page">
           <div className="html_details_page_header">
-            <h1>Html Display Possibilitiess</h1>
+            <h1>Php Display Possibilitiess</h1>
 
             <div
               style={{
@@ -198,10 +206,10 @@ const Details = () => {
                 marginLeft: "30px",
               }}
             >
-              <NavLink to={"/Html/whereto"}>
+              <NavLink to={"/Php/whereto"}>
                 <Button>Back</Button>
               </NavLink>
-              <NavLink to={"/Html/statements"}>
+              <NavLink to={"/Php/statements"}>
                 <Button>Next</Button>
               </NavLink>
             </div>
@@ -209,8 +217,8 @@ const Details = () => {
             <div>
               <ul>
                 <p>
-                  A htmlname function is a block of htmlname code, that can be
-                  executed when "called" for. For example, a function can be
+                  A Phpname function is a block of Phpname code, that can
+                  be executed when "called" for. For example, a function can be
                   called when an event occurs, like when the user clicks a
                   button. You will learn much more about functions and events in
                   later chapters..
@@ -222,11 +230,11 @@ const Details = () => {
       )}
       {/* Css whereto ended */}
 
-      {/* htmlname statements to started */}
-      {htmlname === "statements" && (
+      {/* Phpname statements to started */}
+      {Phpname === "statements" && (
         <div className="html_wrapper_page">
           <div className="html_details_page_header">
-            <h1>Html Programs</h1>
+            <h1>Php Programs</h1>
 
             <div
               style={{
@@ -236,10 +244,10 @@ const Details = () => {
                 marginLeft: "30px",
               }}
             >
-              <NavLink to={"/Html/output"}>
+              <NavLink to={"/Php/output"}>
                 <Button>Next</Button>
               </NavLink>
-              <NavLink to={"/Html/syntax"}>
+              <NavLink to={"/Php/syntax"}>
                 <Button>Next</Button>
               </NavLink>
             </div>
@@ -248,41 +256,42 @@ const Details = () => {
               <p>
                 A computer program is a list of "instructions" to be "executed"
                 by a computer. In a programming language, these programming
-                instructions are called statements. A htmlname program is a list
-                of programming statements. htmlname statements are composed of:
-                Values, Operators, Expressions, Keywords, and Comments. This
+                instructions are called statements. A Phpname program is a
+                list of programming statements. Phpname statements are
+                composed of: Values, Operators, Expressions, Keywords, and
+                Comments. This statement tells the browser to write "Hello
+                Dolly." inside an HTML element with Keywords, and Comments. This
                 statement tells the browser to write "Hello Dolly." inside an
-                HTML element with Keywords, and Comments. This statement tells
-                the browser to write "Hello Dolly." inside an HTML element with
-                id="demo":htmlname statements are composed of: Values,
-                Operators, Expressions, Keywords, and Comments. This statement
-                tells the browser to write "Hello Dolly." inside an HTML element
-                with id="demo":htmlname statements are composed of: Values,
-                Operators, Expressions, Keywords, and Comments. This statement
-                tells the browser to write "Hello Dolly." inside an HTML element
-                with id="demo":
+                HTML element with id="demo":Phpname statements are composed
+                of: Values, Operators, Expressions, Keywords, and Comments. This
+                statement tells the browser to write "Hello Dolly." inside an
+                HTML element with id="demo":Phpname statements are composed
+                of: Values, Operators, Expressions, Keywords, and Comments. This
+                statement tells the browser to write "Hello Dolly." inside an
+                HTML element with id="demo":
               </p>
             </div>
             <h2>Semicolons</h2>
             <p>
-              Semicolons separate htmlname statements. Add a semicolon at the
-              end of each executable statement: Examples htmlname ignores
+              Semicolons separate Phpname statements. Add a semicolon at the
+              end of each executable statement: Examples Phpname ignores
               multiple spaces. You can add white space to your script to make it
-              more readable. The following lines are equivalent:htmlname ignores
-              multiple spaces. You can add white space to your script to make it
-              more readable. The following lines are equivalent:htmlname ignores
-              multiple spaces. You can add white space to your script to make it
-              more readable. The following lines are equivalent:
+              more readable. The following lines are equivalent:Phpname
+              ignores multiple spaces. You can add white space to your script to
+              make it more readable. The following lines are
+              equivalent:Phpname ignores multiple spaces. You can add white
+              space to your script to make it more readable. The following lines
+              are equivalent:
             </p>
           </div>
         </div>
       )}
       {/* whereto ended */}
-      {/* htmlname Syntax to started */}
-      {htmlname === "syntax" && (
+      {/* Phpname Syntax to started */}
+      {Phpname === "syntax" && (
         <div className="html_wrapper_page">
           <div className="html_details_page_header">
-            <h1>Html Syntax</h1>
+            <h1>Php Syntax</h1>
 
             <div
               style={{
@@ -292,10 +301,10 @@ const Details = () => {
                 marginLeft: "30px",
               }}
             >
-              <NavLink to={"/Html/output"}>
+              <NavLink to={"/Php/output"}>
                 <Button>Back</Button>
               </NavLink>
-              <NavLink to={"/Html/comments"}>
+              <NavLink to={"/Php/comments"}>
                 <Button>Next</Button>
               </NavLink>
             </div>
@@ -303,18 +312,18 @@ const Details = () => {
               <p>
                 A computer program is a list of "instructions" to be "executed"
                 by a computer. In a programming language, these programming
-                instructions are called statements. A htmlname program is a list
-                of programming statements. htmlname statements are composed of:
-                Values, Operators, Expressions, Keywords, and Comments. This
+                instructions are called statements. A Phpname program is a
+                list of programming statements. Phpname statements are
+                composed of: Values, Operators, Expressions, Keywords, and
+                Comments. This statement tells the browser to write "Hello
+                Dolly." inside an HTML element with Keywords, and Comments. This
                 statement tells the browser to write "Hello Dolly." inside an
-                HTML element with Keywords, and Comments. This statement tells
-                the browser to write "Hello Dolly." inside an HTML element with
-                id="demo":htmlname statements are composed
+                HTML element with id="demo":Phpname statements are composed
                 <h2>Lorem Ipsum Headings</h2>
                 of: Values, Operators, Expressions, Keywords, and Comments. This
                 statement tells the browser to write "Hello Dolly." inside an
-                HTML element with id="demo":htmlname statements are composed of:
-                Values, Operators, Expressions, Keywords, and Comments. This
+                HTML element with id="demo":Phpname statements are composed
+                of: Values, Operators, Expressions, Keywords, and Comments. This
                 statement tells the browser to write "Hello Dolly." inside an
                 HTML element with id="demo":
               </p>
@@ -322,11 +331,11 @@ const Details = () => {
           </div>
         </div>
       )}
-      {/* htmlname comments ended */}
-      {htmlname === "comments" && (
+      {/* Phpname comments ended */}
+      {Phpname === "comments" && (
         <div className="html_wrapper_page">
           <div className="html_details_page_header">
-            <h1>Html Comments</h1>
+            <h1>Php Comments</h1>
 
             <div
               style={{
@@ -336,10 +345,10 @@ const Details = () => {
                 marginLeft: "30px",
               }}
             >
-              <NavLink to={"/Html/syntax"}>
+              <NavLink to={"/Php/syntax"}>
                 <Button>Back</Button>
               </NavLink>
-              <NavLink to={"/Html/variables"}>
+              <NavLink to={"/Php/variables"}>
                 <Button>Next</Button>
               </NavLink>
             </div>
@@ -347,64 +356,18 @@ const Details = () => {
               <p>
                 A computer program is a list of "instructions" to be "executed"
                 by a computer. In a programming language, these programming
-                instructions are called statements. A htmlname program is a list
-                of programming statements. htmlname statements are composed of:
-                Values, Operators, Expressions, Keywords, and Comments. This
+                instructions are called statements. A Phpname program is a
+                list of programming statements. Phpname statements are
+                composed of: Values, Operators, Expressions, Keywords, and
+                Comments. This statement tells the browser to write "Hello
+                Dolly." inside an HTML element with Keywords, and Comments. This
                 statement tells the browser to write "Hello Dolly." inside an
-                HTML element with Keywords, and Comments. This statement tells
-                the browser to write "Hello Dolly." inside an HTML element with
-                id="demo":htmlname statements are composed
+                HTML element with id="demo":Phpname statements are composed
                 <h2>Lorem Ipsum Headings</h2>
                 of: Values, Operators, Expressions, Keywords, and Comments. This
                 statement tells the browser to write "Hello Dolly." inside an
-                HTML element with id="demo":htmlname statements are composed of:
-                Values, Operators, Expressions, Keywords, and Comments. This
-                statement tells the browser to write "Hello Dolly." inside an
-                HTML element with id="demo":
-              </p>
-            </div>
-          </div>
-        </div>
-      )}
-      {/* Javscript comments ended */}
-
-      {/* htmlname variables ended */}
-      {htmlname === "variables" && (
-        <div className="html_wrapper_page">
-          <div className="html_details_page_header">
-            <h1>Html Variables</h1>
-
-            <div
-              style={{
-                display: "flex",
-                width: "60%",
-                justifyContent: "space-between",
-                marginLeft: "30px",
-              }}
-            >
-              <NavLink to={"/Html/comments"}>
-                <Button>Back</Button>
-              </NavLink>
-              <NavLink to={"/Html/let"}>
-                <Button>Next</Button>
-              </NavLink>
-            </div>
-            <div>
-              <p>
-                A computer program is a list of "instructions" to be "executed"
-                by a computer. In a programming language, these programming
-                instructions are called statements. A htmlname program is a list
-                of programming statements. htmlname statements are composed of:
-                Values, Operators, Expressions, Keywords, and Comments. This
-                statement tells the browser to write "Hello Dolly." inside an
-                HTML element with Keywords, and Comments. This statement tells
-                the browser to write "Hello Dolly." inside an HTML element with
-                id="demo":htmlname statements are composed
-                <h2>Lorem Ipsum Headings</h2>
+                HTML element with id="demo":Phpname statements are composed
                 of: Values, Operators, Expressions, Keywords, and Comments. This
-                statement tells the browser to write "Hello Dolly." inside an
-                HTML element with id="demo":htmlname statements are composed of:
-                Values, Operators, Expressions, Keywords, and Comments. This
                 statement tells the browser to write "Hello Dolly." inside an
                 HTML element with id="demo":
               </p>
@@ -414,11 +377,11 @@ const Details = () => {
       )}
       {/* Javscript comments ended */}
 
-      {/* htmlname let started */}
-      {htmlname === "let" && (
+      {/* Phpname variables ended */}
+      {Phpname === "variables" && (
         <div className="html_wrapper_page">
           <div className="html_details_page_header">
-            <h1>Html Let</h1>
+            <h1>Php Variables</h1>
 
             <div
               style={{
@@ -428,10 +391,56 @@ const Details = () => {
                 marginLeft: "30px",
               }}
             >
-              <NavLink to={"/Html/variables"}>
+              <NavLink to={"/Php/comments"}>
                 <Button>Back</Button>
               </NavLink>
-              <NavLink to={"/Html/const"}>
+              <NavLink to={"/Php/let"}>
+                <Button>Next</Button>
+              </NavLink>
+            </div>
+            <div>
+              <p>
+                A computer program is a list of "instructions" to be "executed"
+                by a computer. In a programming language, these programming
+                instructions are called statements. A Phpname program is a
+                list of programming statements. Phpname statements are
+                composed of: Values, Operators, Expressions, Keywords, and
+                Comments. This statement tells the browser to write "Hello
+                Dolly." inside an HTML element with Keywords, and Comments. This
+                statement tells the browser to write "Hello Dolly." inside an
+                HTML element with id="demo":Phpname statements are composed
+                <h2>Lorem Ipsum Headings</h2>
+                of: Values, Operators, Expressions, Keywords, and Comments. This
+                statement tells the browser to write "Hello Dolly." inside an
+                HTML element with id="demo":Phpname statements are composed
+                of: Values, Operators, Expressions, Keywords, and Comments. This
+                statement tells the browser to write "Hello Dolly." inside an
+                HTML element with id="demo":
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
+      {/* Javscript comments ended */}
+
+      {/* Phpname let started */}
+      {Phpname === "let" && (
+        <div className="html_wrapper_page">
+          <div className="html_details_page_header">
+            <h1>Php Let</h1>
+
+            <div
+              style={{
+                display: "flex",
+                width: "60%",
+                justifyContent: "space-between",
+                marginLeft: "30px",
+              }}
+            >
+              <NavLink to={"/Php/variables"}>
+                <Button>Back</Button>
+              </NavLink>
+              <NavLink to={"/Php/const"}>
                 <Button>Next</Button>
               </NavLink>
             </div>
@@ -440,11 +449,11 @@ const Details = () => {
       )}
       {/* Javscript comments ended */}
 
-      {/* htmlname const started */}
-      {htmlname === "const" && (
+      {/* Phpname const started */}
+      {Phpname === "const" && (
         <div className="html_wrapper_page">
           <div className="html_details_page_header">
-            <h1>Html Const</h1>
+            <h1>Php Const</h1>
 
             <div
               style={{
@@ -454,10 +463,10 @@ const Details = () => {
                 marginLeft: "30px",
               }}
             >
-              <NavLink to={"/Html/let"}>
+              <NavLink to={"/Php/let"}>
                 <Button>Back</Button>
               </NavLink>
-              <NavLink to={"/Html/operators"}>
+              <NavLink to={"/Php/operators"}>
                 <Button>Next</Button>
               </NavLink>
             </div>
@@ -466,11 +475,11 @@ const Details = () => {
       )}
       {/* Javscript comments ended */}
 
-      {/* htmlname const started */}
-      {htmlname === "operators" && (
+      {/* Phpname const started */}
+      {Phpname === "operators" && (
         <div className="html_wrapper_page">
           <div className="html_details_page_header">
-            <h1>Html Const</h1>
+            <h1>Php Const</h1>
 
             <div
               style={{
@@ -480,10 +489,10 @@ const Details = () => {
                 marginLeft: "30px",
               }}
             >
-              <NavLink to={"/Html/let"}>
+              <NavLink to={"/Php/let"}>
                 <Button>Back</Button>
               </NavLink>
-              <NavLink to={"/Html/arithamatic"}>
+              <NavLink to={"/Php/arithamatic"}>
                 <Button>Next</Button>
               </NavLink>
             </div>
@@ -491,11 +500,11 @@ const Details = () => {
         </div>
       )}
       {/* Javscript comments ended */}
-      {/* htmlname arithmatic started */}
-      {htmlname === "arithamatic" && (
+      {/* Phpname arithmatic started */}
+      {Phpname === "arithamatic" && (
         <div className="html_wrapper_page">
           <div className="html_details_page_header">
-            <h1>Html Arithmatic</h1>
+            <h1>Php Arithmatic</h1>
 
             <div
               style={{
@@ -505,10 +514,10 @@ const Details = () => {
                 marginLeft: "30px",
               }}
             >
-              <NavLink to={"/Html/operators"}>
+              <NavLink to={"/Php/operators"}>
                 <Button>Back</Button>
               </NavLink>
-              <NavLink to={"/Html/assignment"}>
+              <NavLink to={"/Php/assignment"}>
                 <Button>Next</Button>
               </NavLink>
             </div>
@@ -517,11 +526,11 @@ const Details = () => {
       )}
       {/* Javscript arithmatic ended */}
 
-      {/* htmlname assigment started */}
-      {htmlname === "assignment" && (
+      {/* Phpname assigment started */}
+      {Phpname === "assignment" && (
         <div className="html_wrapper_page">
           <div className="html_details_page_header">
-            <h1>Html Assignment</h1>
+            <h1>Php Assignment</h1>
 
             <div
               style={{
@@ -531,10 +540,10 @@ const Details = () => {
                 marginLeft: "30px",
               }}
             >
-              <NavLink to={"/Html/arithmatic"}>
+              <NavLink to={"/Php/arithmatic"}>
                 <Button>Back</Button>
               </NavLink>
-              <NavLink to={"/Html/datatypes"}>
+              <NavLink to={"/Php/datatypes"}>
                 <Button>Next</Button>
               </NavLink>
             </div>
@@ -543,11 +552,11 @@ const Details = () => {
       )}
       {/* Javscript arithmatic ended */}
 
-      {/* htmlname datatypes started */}
-      {htmlname === "datatypes" && (
+      {/* Phpname datatypes started */}
+      {Phpname === "datatypes" && (
         <div className="html_wrapper_page">
           <div className="html_details_page_header">
-            <h1>Html Data Types</h1>
+            <h1>Php Data Types</h1>
 
             <div
               style={{
@@ -557,10 +566,10 @@ const Details = () => {
                 marginLeft: "30px",
               }}
             >
-              <NavLink to={"/Html/assignment"}>
+              <NavLink to={"/Php/assignment"}>
                 <Button>Back</Button>
               </NavLink>
-              <NavLink to={"/Html/functions"}>
+              <NavLink to={"/Php/functions"}>
                 <Button>Next</Button>
               </NavLink>
             </div>
@@ -569,11 +578,11 @@ const Details = () => {
       )}
       {/* Javscript dattypes ended */}
 
-      {/* htmlname datatypes started */}
-      {htmlname === "functions" && (
+      {/* Phpname datatypes started */}
+      {Phpname === "functions" && (
         <div className="html_wrapper_page">
           <div className="html_details_page_header">
-            <h1>Html Functions</h1>
+            <h1>Php Functions</h1>
 
             <div
               style={{
@@ -583,10 +592,10 @@ const Details = () => {
                 marginLeft: "30px",
               }}
             >
-              <NavLink to={"/Html/datatypes"}>
+              <NavLink to={"/Php/datatypes"}>
                 <Button>Back</Button>
               </NavLink>
-              <NavLink to={"/Html/objects"}>
+              <NavLink to={"/Php/objects"}>
                 <Button>Next</Button>
               </NavLink>
             </div>
@@ -595,11 +604,11 @@ const Details = () => {
       )}
       {/* Javscript dattypes ended */}
 
-      {/* htmlname objects started */}
-      {htmlname === "objects" && (
+      {/* Phpname objects started */}
+      {Phpname === "objects" && (
         <div className="html_wrapper_page">
           <div className="html_details_page_header">
-            <h1>Html Objects</h1>
+            <h1>Php Objects</h1>
 
             <div
               style={{
@@ -609,10 +618,10 @@ const Details = () => {
                 marginLeft: "30px",
               }}
             >
-              <NavLink to={"/Html/functions"}>
+              <NavLink to={"/Php/functions"}>
                 <Button>Back</Button>
               </NavLink>
-              <NavLink to={"/Html/events"}>
+              <NavLink to={"/Php/events"}>
                 <Button>Next</Button>
               </NavLink>
             </div>
@@ -621,11 +630,11 @@ const Details = () => {
       )}
       {/* Javscript dattypes ended */}
 
-      {/* htmlname events started */}
-      {htmlname === "events" && (
+      {/* Phpname events started */}
+      {Phpname === "events" && (
         <div className="html_wrapper_page">
           <div className="html_details_page_header">
-            <h1>Html Events</h1>
+            <h1>Php Events</h1>
 
             <div
               style={{
@@ -635,10 +644,10 @@ const Details = () => {
                 marginLeft: "30px",
               }}
             >
-              <NavLink to={"/Html/objects"}>
+              <NavLink to={"/Php/objects"}>
                 <Button>Back</Button>
               </NavLink>
-              <NavLink to={"/Html/strings"}>
+              <NavLink to={"/Php/strings"}>
                 <Button>Next</Button>
               </NavLink>
             </div>
@@ -648,10 +657,10 @@ const Details = () => {
       {/* Javscript events ended */}
 
       {/*  */}
-      {htmlname === "strings" && (
+      {Phpname === "strings" && (
         <div className="html_wrapper_page">
           <div className="html_details_page_header">
-            <h1>Html Strings</h1>
+            <h1>Php Strings</h1>
 
             <div
               style={{
@@ -661,10 +670,62 @@ const Details = () => {
                 marginLeft: "30px",
               }}
             >
-              <NavLink to={"/Html/events"}>
+              <NavLink to={"/Php/events"}>
                 <Button>Back</Button>
               </NavLink>
-              <NavLink to={"/Html/stringmethod"}>
+              <NavLink to={"/Php/stringmethod"}>
+                <Button>Next</Button>
+              </NavLink>
+            </div>
+          </div>
+        </div>
+      )}
+      {/*  */}
+
+        {/*  */}
+        {Phpname === "stringmethod" && (
+        <div className="html_wrapper_page">
+          <div className="html_details_page_header">
+            <h1>Php Methods</h1>
+
+            <div
+              style={{
+                display: "flex",
+                width: "60%",
+                justifyContent: "space-between",
+                marginLeft: "30px",
+              }}
+            >
+              <NavLink to={"/Php/strings"}>
+                <Button>Back</Button>
+              </NavLink>
+              <NavLink to={"/Php/stringsearch"}>
+                <Button>Next</Button>
+              </NavLink>
+            </div>
+          </div>
+        </div>
+      )}
+      {/*  */}
+
+       {/*  */}
+       {Phpname === "stringsearch" && (
+        <div className="html_wrapper_page">
+          <div className="html_details_page_header">
+            <h1>Php Search</h1>
+
+            <div
+              style={{
+                display: "flex",
+                width: "60%",
+                justifyContent: "space-between",
+                marginLeft: "30px",
+              }}
+            >
+              <NavLink to={"/Php/stringmethod"}>
+                <Button>Back</Button>
+              </NavLink>
+              <NavLink to={"/Php/stringtemplates"}>
                 <Button>Next</Button>
               </NavLink>
             </div>
@@ -674,10 +735,10 @@ const Details = () => {
       {/*  */}
 
       {/*  */}
-      {htmlname === "stringmethod" && (
+      {Phpname === "stringtemplates" && (
         <div className="html_wrapper_page">
           <div className="html_details_page_header">
-            <h1>Html Methods</h1>
+            <h1>Php Templates</h1>
 
             <div
               style={{
@@ -687,10 +748,10 @@ const Details = () => {
                 marginLeft: "30px",
               }}
             >
-              <NavLink to={"/Html/strings"}>
+              <NavLink to={"/Php/stringsearch"}>
                 <Button>Back</Button>
               </NavLink>
-              <NavLink to={"/Html/stringsearch"}>
+              <NavLink to={"/Php/numbers"}>
                 <Button>Next</Button>
               </NavLink>
             </div>
@@ -699,11 +760,11 @@ const Details = () => {
       )}
       {/*  */}
 
-      {/*  */}
-      {htmlname === "stringsearch" && (
+       {/*  */}
+       {Phpname === "numbers" && (
         <div className="html_wrapper_page">
           <div className="html_details_page_header">
-            <h1>Html Search</h1>
+            <h1>Php Numbers</h1>
 
             <div
               style={{
@@ -713,10 +774,10 @@ const Details = () => {
                 marginLeft: "30px",
               }}
             >
-              <NavLink to={"/Html/stringmethod"}>
+              <NavLink to={"/Php/stringtemplates"}>
                 <Button>Back</Button>
               </NavLink>
-              <NavLink to={"/Html/stringtemplates"}>
+              <NavLink to={"/Php/bigint"}>
                 <Button>Next</Button>
               </NavLink>
             </div>
@@ -724,12 +785,11 @@ const Details = () => {
         </div>
       )}
       {/*  */}
-
-      {/*  */}
-      {htmlname === "stringtemplates" && (
+        {/*  */}
+        {Phpname === "bigint" && (
         <div className="html_wrapper_page">
           <div className="html_details_page_header">
-            <h1>Html Templates</h1>
+            <h1>Php BigInt</h1>
 
             <div
               style={{
@@ -739,61 +799,10 @@ const Details = () => {
                 marginLeft: "30px",
               }}
             >
-              <NavLink to={"/Html/stringsearch"}>
+              <NavLink to={"/Php/numbers"}>
                 <Button>Back</Button>
               </NavLink>
-              <NavLink to={"/Html/numbers"}>
-                <Button>Next</Button>
-              </NavLink>
-            </div>
-          </div>
-        </div>
-      )}
-      {/*  */}
-
-      {/*  */}
-      {htmlname === "numbers" && (
-        <div className="html_wrapper_page">
-          <div className="html_details_page_header">
-            <h1>Html Numbers</h1>
-
-            <div
-              style={{
-                display: "flex",
-                width: "60%",
-                justifyContent: "space-between",
-                marginLeft: "30px",
-              }}
-            >
-              <NavLink to={"/Html/stringtemplates"}>
-                <Button>Back</Button>
-              </NavLink>
-              <NavLink to={"/Html/bigint"}>
-                <Button>Next</Button>
-              </NavLink>
-            </div>
-          </div>
-        </div>
-      )}
-      {/*  */}
-      {/*  */}
-      {htmlname === "bigint" && (
-        <div className="html_wrapper_page">
-          <div className="html_details_page_header">
-            <h1>Html BigInt</h1>
-
-            <div
-              style={{
-                display: "flex",
-                width: "60%",
-                justifyContent: "space-between",
-                marginLeft: "30px",
-              }}
-            >
-              <NavLink to={"/Html/numbers"}>
-                <Button>Back</Button>
-              </NavLink>
-              <NavLink to={"/Html/introduction"}>
+              <NavLink to={"/Php/introduction"}>
                 <Button>Go To Top</Button>
               </NavLink>
             </div>
@@ -805,16 +814,17 @@ const Details = () => {
         <p>
           A computer program is a list of "instructions" to be "executed" by a
           computer. In a programming language, these programming instructions
-          are called statements. A htmlname program is a list of programming
-          statements. htmlname statements are composed of: Values, Operators,
+          are called statements. A Phpname program is a list of programming
+          statements. Phpname statements are composed of: Values, Operators,
           Expressions, Keywords, and Comments. This statement tells the browser
           to write "Hello Dolly." inside an HTML element with Keywords, and
           Comments. This statement tells the browser to write "Hello Dolly."
-          inside an HTML element with id="demo":htmlname statements are composed
+          inside an HTML element with id="demo":Phpname statements are
+          composed
           <h2>Lorem Ipsum Headings</h2>
           of: Values, Operators, Expressions, Keywords, and Comments. This
           statement tells the browser to write "Hello Dolly." inside an HTML
-          element with id="demo":htmlname statements are composed of: Values,
+          element with id="demo":Phpname statements are composed of: Values,
           Operators, Expressions, Keywords, and Comments. This statement tells
           the browser to write "Hello Dolly." inside an HTML element with
           id="demo":
@@ -824,4 +834,4 @@ const Details = () => {
     </div>
   );
 };
-export default Details;
+export default PhpCompo;

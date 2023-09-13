@@ -1,52 +1,82 @@
 import React, { useState } from "react";
+import img from "../images/logo.jpg";
 import { Button } from "react-bootstrap";
+
 import { useParams, NavLink } from "react-router-dom";
-import NavBarCompo from "./NavBarCompo";
 
-const Details = () => {
-  const { htmlname } = useParams();
+const ReactCompo = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [isTrue, setIsTrue] = useState(true);
+  const [isfocus, setIsFocus] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
+  const { reactname } = useParams();
+
+  const handleClick = () => {
+    setIsVisible(!isVisible);
+
+    setIsTrue(!isTrue);
+  };
+  const handleFocus = () => {
+    setIsFocus(true);
+  };
+  const handleBlur = () => {
+    setIsFocus(false);
+  };
   return (
     <div>
-      {/* Navbar Started */}
-    <NavBarCompo/>
-      {/* Navbar Ended */}
+      {/* Header Started */}
+      <div>
+        <div className="uppernavbarone">
+          <img src={img} alt="img" width="40px" height="40px" />
+          <NavLink onClick={handleClick}>Tutorials</NavLink>
+          <NavLink>Exercies</NavLink>
+
+          <NavLink>Get Certifeid</NavLink>
+
+          <NavLink>Services</NavLink>
+          <NavLink>BootCamps</NavLink>
+          <NavLink>Spaces</NavLink>
+          <NavLink>Login</NavLink>
+          <NavLink>SignUp</NavLink>
+        </div>
+      </div>
+      {/* Header Ended */}
       {/* sidebarStarted */}
       <div className="side_bar_contents">
-        <h5>Html Tutorials</h5>
+        <h5>React Js Tutorials</h5>
 
-        <NavLink to={"/Html/introduction"}>Introduction</NavLink>
-        <NavLink to={"/Html/whereto"}>Where to</NavLink>
-        <NavLink to={"/Html/output"}>OutPut</NavLink>
-        <NavLink to={"/Html/statements"}>Statements</NavLink>
-        <NavLink to={"/Html/syntax"}>Syntax</NavLink>
-        <NavLink to={"/Html/comments"}>Comments</NavLink>
-        <NavLink to={"/Html/variables"}>Variables</NavLink>
-        <NavLink to={"/Html/let"}>Let</NavLink>
-        <NavLink to={"/Html/const"}>Const</NavLink>
-        <NavLink to={"/Html/operators"}>Operators</NavLink>
-        <NavLink to={"/Html/arithamatic"}>Arithmatic</NavLink>
-        <NavLink to={"/Html/assignment"}>Assignment</NavLink>
-        <NavLink to={"/Html/datatypes"}>Data Types</NavLink>
-        <NavLink to={"/Html/functions"}>Functions</NavLink>
-        <NavLink to={"/Html/objects"}>Objects</NavLink>
-        <NavLink to={"/Html/events"}>Events</NavLink>
-        <NavLink to={"/Html/strings"}>Strings</NavLink>
-        <NavLink to={"/Html/stringmethod"}>String Method</NavLink>
-        <NavLink to={"/Html/stringsearch"}>String Search</NavLink>
-        <NavLink to={"/Html/stringtemplates"}>String Templates</NavLink>
-        <NavLink to={"/Html/numbers"}>Numbers</NavLink>
-        <NavLink to={"/Html/bigint"}>BigInt</NavLink>
+        <NavLink to={"/react/introduction"}>Introduction</NavLink>
+         <NavLink to={"/react/whereto"}>Where to</NavLink>
+        <NavLink to={"/react/output"}>OutPut</NavLink>
+        <NavLink to={"/react/statements"}>Statements</NavLink>
+        <NavLink to={"/react/syntax"}>Syntax</NavLink>
+        <NavLink to={"/react/comments"}>Comments</NavLink>
+        <NavLink to={"/react/variables"}>Variables</NavLink>
+        <NavLink to={"/react/let"}>Let</NavLink>
+        <NavLink to={"/react/const"}>Const</NavLink>
+        <NavLink to={"/react/operators"}>Operators</NavLink>
+        <NavLink to={"/react/arithamatic"}>Arithmatic</NavLink>
+        <NavLink to={"/react/assignment"}>Assignment</NavLink>
+        <NavLink to={"/react/datatypes"}>Data Types</NavLink>
+        <NavLink to={"/react/functions"}>Functions</NavLink>
+        <NavLink to={"/react/objects"}>Objects</NavLink>
+        <NavLink to={"/react/events"}>Events</NavLink>
+        <NavLink to={"/react/strings"}>Strings</NavLink>
+        <NavLink to={"/react/stringmethod"}>String Method</NavLink>
+        <NavLink to={"/react/stringsearch"}>String Search</NavLink>
+        <NavLink to={"/react/stringtemplates"}>String Templates</NavLink>
+        <NavLink to={"/react/numbers"}>Numbers</NavLink>
+        <NavLink to={"/react/bigint"}>BigInt</NavLink>
       </div>
       {/*  */}
 
       {/* sidebar Ended */}
-
-      {/* htmlname introduction started */}
-      {htmlname === "introduction" && (
+      {/* reactname introduction started */}
+      {reactname === "introduction" && (
         <div className="html_wrapper_page">
           <div className="html_details_page_header">
-            <h1>Introduction to Html</h1>
+            <h1>Introduction to React Js</h1>
 
             <div
               style={{
@@ -56,10 +86,10 @@ const Details = () => {
                 marginLeft: "30px",
               }}
             >
-              <NavLink to={"/Html/introduction"}>
+              <NavLink to={"/React Js/introduction"}>
                 <Button>Back</Button>
               </NavLink>
-              <NavLink to={"/Html/whereto"}>
+              <NavLink to={"/React Js/whereto"}>
                 <Button>Next</Button>
               </NavLink>
             </div>
@@ -67,24 +97,24 @@ const Details = () => {
             <div>
               <ul>
                 <p>
-                  htmlname (JS) is a lightweight interpreted (or just-in-time
+                  reactname (JS) is a lightweight interpreted (or just-in-time
                   compiled) programming language with first-class functions.
                   While it is most well-known as the scripting language for Web
                   pages, many non-browser environments also use it, such as
-                  Node.js, Apache CouchDB and Adobe Acrobat. htmlname is a
+                  Node.js, Apache CouchDB and Adobe Acrobat. reactname is a
                   prototype-based, multi-paradigm, single-threaded, dynamic
                   language, supporting object-oriented, imperative, and
-                  declarative (e.g. functional programming) styles. htmlname's
+                  declarative (e.g. functional programming) styles. reactname's
                   dynamic capabilities include runtime object construction,
                   variable parameter lists, function variables, dynamic script
                   creation (via eval), object introspection (via for...in and
-                  Object utilities), and source-code recovery (htmlname
+                  Object utilities), and source-code recovery (reactname
                   functions store their source text and can be retrieved through
-                  toString()). htmlname's dynamic capabilities include runtime
+                  toString()). reactname's dynamic capabilities include runtime
                   object construction, variable parameter lists, function
                   variables, dynamic script creation (via eval), object
                   introspection (via for...in and Object utilities), and
-                  source-code recovery (htmlname functions store their source
+                  source-code recovery (reactname functions store their source
                   text and can be retrieved through toString()).
                 </p>
               </ul>
@@ -118,15 +148,15 @@ const Details = () => {
               <h2>For complete beginners</h2>
               <ul>
                 <li>
-                  Head over to our Learning Area htmlname topic if you want to
-                  learn htmlname but have no previous experience with htmlname
-                  or programming. The complete modules available there are as
-                  follows:
+                  Head over to our Learning Area reactname topic if you want to
+                  learn reactname but have no previous experience with
+                  reactname or programming. The complete modules available
+                  there are as follows:
                 </li>
               </ul>
-              <h2>htmlname guide</h2>
+              <h2>reactname guide</h2>
               <p>
-                htmlname frameworks are an essential part of modern front-end
+                reactname frameworks are an essential part of modern front-end
                 web development, providing developers with proven tools for
                 building scalable, interactive web applications. This module
                 gives you some fundamental background knowledge about how
@@ -146,11 +176,11 @@ const Details = () => {
       )}
       {/* Css introduction ended */}
 
-      {/* htmlname where to started */}
-      {htmlname === "whereto" && (
+      {/* reactname where to started */}
+      {reactname === "whereto" && (
         <div className="html_wrapper_page">
           <div className="html_details_page_header">
-            <h1>Html Functions and Events</h1>
+            <h1>React Js Functions and Events</h1>
 
             <div
               style={{
@@ -160,10 +190,10 @@ const Details = () => {
                 marginLeft: "30px",
               }}
             >
-              <NavLink to={"/Html/introduction"}>
+              <NavLink to={"/React Js/introduction"}>
                 <Button>Back</Button>
               </NavLink>
-              <NavLink to={"/Html/output"}>
+              <NavLink to={"/React Js/output"}>
                 <Button>Next</Button>
               </NavLink>
             </div>
@@ -171,8 +201,8 @@ const Details = () => {
             <div>
               <ul>
                 <p>
-                  A htmlname function is a block of htmlname code, that can be
-                  executed when "called" for. For example, a function can be
+                  A reactname function is a block of reactname code, that can
+                  be executed when "called" for. For example, a function can be
                   called when an event occurs, like when the user clicks a
                   button. You will learn much more about functions and events in
                   later chapters..
@@ -184,11 +214,11 @@ const Details = () => {
       )}
       {/* Css whereto ended */}
 
-      {/* htmlname output to started */}
-      {htmlname === "output" && (
+      {/* reactname output to started */}
+      {reactname === "output" && (
         <div className="html_wrapper_page">
           <div className="html_details_page_header">
-            <h1>Html Display Possibilitiess</h1>
+            <h1>React Js Display Possibilitiess</h1>
 
             <div
               style={{
@@ -198,10 +228,10 @@ const Details = () => {
                 marginLeft: "30px",
               }}
             >
-              <NavLink to={"/Html/whereto"}>
+              <NavLink to={"/React Js/whereto"}>
                 <Button>Back</Button>
               </NavLink>
-              <NavLink to={"/Html/statements"}>
+              <NavLink to={"/React Js/statements"}>
                 <Button>Next</Button>
               </NavLink>
             </div>
@@ -209,8 +239,8 @@ const Details = () => {
             <div>
               <ul>
                 <p>
-                  A htmlname function is a block of htmlname code, that can be
-                  executed when "called" for. For example, a function can be
+                  A reactname function is a block of reactname code, that can
+                  be executed when "called" for. For example, a function can be
                   called when an event occurs, like when the user clicks a
                   button. You will learn much more about functions and events in
                   later chapters..
@@ -222,11 +252,11 @@ const Details = () => {
       )}
       {/* Css whereto ended */}
 
-      {/* htmlname statements to started */}
-      {htmlname === "statements" && (
+      {/* reactname statements to started */}
+      {reactname === "statements" && (
         <div className="html_wrapper_page">
           <div className="html_details_page_header">
-            <h1>Html Programs</h1>
+            <h1>React Js Programs</h1>
 
             <div
               style={{
@@ -236,10 +266,10 @@ const Details = () => {
                 marginLeft: "30px",
               }}
             >
-              <NavLink to={"/Html/output"}>
+              <NavLink to={"/React Js/output"}>
                 <Button>Next</Button>
               </NavLink>
-              <NavLink to={"/Html/syntax"}>
+              <NavLink to={"/React Js/syntax"}>
                 <Button>Next</Button>
               </NavLink>
             </div>
@@ -248,41 +278,42 @@ const Details = () => {
               <p>
                 A computer program is a list of "instructions" to be "executed"
                 by a computer. In a programming language, these programming
-                instructions are called statements. A htmlname program is a list
-                of programming statements. htmlname statements are composed of:
-                Values, Operators, Expressions, Keywords, and Comments. This
+                instructions are called statements. A reactname program is a
+                list of programming statements. reactname statements are
+                composed of: Values, Operators, Expressions, Keywords, and
+                Comments. This statement tells the browser to write "Hello
+                Dolly." inside an HTML element with Keywords, and Comments. This
                 statement tells the browser to write "Hello Dolly." inside an
-                HTML element with Keywords, and Comments. This statement tells
-                the browser to write "Hello Dolly." inside an HTML element with
-                id="demo":htmlname statements are composed of: Values,
-                Operators, Expressions, Keywords, and Comments. This statement
-                tells the browser to write "Hello Dolly." inside an HTML element
-                with id="demo":htmlname statements are composed of: Values,
-                Operators, Expressions, Keywords, and Comments. This statement
-                tells the browser to write "Hello Dolly." inside an HTML element
-                with id="demo":
+                HTML element with id="demo":reactname statements are composed
+                of: Values, Operators, Expressions, Keywords, and Comments. This
+                statement tells the browser to write "Hello Dolly." inside an
+                HTML element with id="demo":reactname statements are composed
+                of: Values, Operators, Expressions, Keywords, and Comments. This
+                statement tells the browser to write "Hello Dolly." inside an
+                HTML element with id="demo":
               </p>
             </div>
             <h2>Semicolons</h2>
             <p>
-              Semicolons separate htmlname statements. Add a semicolon at the
-              end of each executable statement: Examples htmlname ignores
+              Semicolons separate reactname statements. Add a semicolon at the
+              end of each executable statement: Examples reactname ignores
               multiple spaces. You can add white space to your script to make it
-              more readable. The following lines are equivalent:htmlname ignores
-              multiple spaces. You can add white space to your script to make it
-              more readable. The following lines are equivalent:htmlname ignores
-              multiple spaces. You can add white space to your script to make it
-              more readable. The following lines are equivalent:
+              more readable. The following lines are equivalent:reactname
+              ignores multiple spaces. You can add white space to your script to
+              make it more readable. The following lines are
+              equivalent:reactname ignores multiple spaces. You can add white
+              space to your script to make it more readable. The following lines
+              are equivalent:
             </p>
           </div>
         </div>
       )}
       {/* whereto ended */}
-      {/* htmlname Syntax to started */}
-      {htmlname === "syntax" && (
+      {/* reactname Syntax to started */}
+      {reactname === "syntax" && (
         <div className="html_wrapper_page">
           <div className="html_details_page_header">
-            <h1>Html Syntax</h1>
+            <h1>React Js Syntax</h1>
 
             <div
               style={{
@@ -292,10 +323,10 @@ const Details = () => {
                 marginLeft: "30px",
               }}
             >
-              <NavLink to={"/Html/output"}>
+              <NavLink to={"/React Js/output"}>
                 <Button>Back</Button>
               </NavLink>
-              <NavLink to={"/Html/comments"}>
+              <NavLink to={"/React Js/comments"}>
                 <Button>Next</Button>
               </NavLink>
             </div>
@@ -303,18 +334,18 @@ const Details = () => {
               <p>
                 A computer program is a list of "instructions" to be "executed"
                 by a computer. In a programming language, these programming
-                instructions are called statements. A htmlname program is a list
-                of programming statements. htmlname statements are composed of:
-                Values, Operators, Expressions, Keywords, and Comments. This
+                instructions are called statements. A reactname program is a
+                list of programming statements. reactname statements are
+                composed of: Values, Operators, Expressions, Keywords, and
+                Comments. This statement tells the browser to write "Hello
+                Dolly." inside an HTML element with Keywords, and Comments. This
                 statement tells the browser to write "Hello Dolly." inside an
-                HTML element with Keywords, and Comments. This statement tells
-                the browser to write "Hello Dolly." inside an HTML element with
-                id="demo":htmlname statements are composed
+                HTML element with id="demo":reactname statements are composed
                 <h2>Lorem Ipsum Headings</h2>
                 of: Values, Operators, Expressions, Keywords, and Comments. This
                 statement tells the browser to write "Hello Dolly." inside an
-                HTML element with id="demo":htmlname statements are composed of:
-                Values, Operators, Expressions, Keywords, and Comments. This
+                HTML element with id="demo":reactname statements are composed
+                of: Values, Operators, Expressions, Keywords, and Comments. This
                 statement tells the browser to write "Hello Dolly." inside an
                 HTML element with id="demo":
               </p>
@@ -322,11 +353,11 @@ const Details = () => {
           </div>
         </div>
       )}
-      {/* htmlname comments ended */}
-      {htmlname === "comments" && (
+      {/* reactname comments ended */}
+      {reactname === "comments" && (
         <div className="html_wrapper_page">
           <div className="html_details_page_header">
-            <h1>Html Comments</h1>
+            <h1>React Js Comments</h1>
 
             <div
               style={{
@@ -336,10 +367,10 @@ const Details = () => {
                 marginLeft: "30px",
               }}
             >
-              <NavLink to={"/Html/syntax"}>
+              <NavLink to={"/React Js/syntax"}>
                 <Button>Back</Button>
               </NavLink>
-              <NavLink to={"/Html/variables"}>
+              <NavLink to={"/React Js/variables"}>
                 <Button>Next</Button>
               </NavLink>
             </div>
@@ -347,64 +378,18 @@ const Details = () => {
               <p>
                 A computer program is a list of "instructions" to be "executed"
                 by a computer. In a programming language, these programming
-                instructions are called statements. A htmlname program is a list
-                of programming statements. htmlname statements are composed of:
-                Values, Operators, Expressions, Keywords, and Comments. This
+                instructions are called statements. A reactname program is a
+                list of programming statements. reactname statements are
+                composed of: Values, Operators, Expressions, Keywords, and
+                Comments. This statement tells the browser to write "Hello
+                Dolly." inside an HTML element with Keywords, and Comments. This
                 statement tells the browser to write "Hello Dolly." inside an
-                HTML element with Keywords, and Comments. This statement tells
-                the browser to write "Hello Dolly." inside an HTML element with
-                id="demo":htmlname statements are composed
+                HTML element with id="demo":reactname statements are composed
                 <h2>Lorem Ipsum Headings</h2>
                 of: Values, Operators, Expressions, Keywords, and Comments. This
                 statement tells the browser to write "Hello Dolly." inside an
-                HTML element with id="demo":htmlname statements are composed of:
-                Values, Operators, Expressions, Keywords, and Comments. This
-                statement tells the browser to write "Hello Dolly." inside an
-                HTML element with id="demo":
-              </p>
-            </div>
-          </div>
-        </div>
-      )}
-      {/* Javscript comments ended */}
-
-      {/* htmlname variables ended */}
-      {htmlname === "variables" && (
-        <div className="html_wrapper_page">
-          <div className="html_details_page_header">
-            <h1>Html Variables</h1>
-
-            <div
-              style={{
-                display: "flex",
-                width: "60%",
-                justifyContent: "space-between",
-                marginLeft: "30px",
-              }}
-            >
-              <NavLink to={"/Html/comments"}>
-                <Button>Back</Button>
-              </NavLink>
-              <NavLink to={"/Html/let"}>
-                <Button>Next</Button>
-              </NavLink>
-            </div>
-            <div>
-              <p>
-                A computer program is a list of "instructions" to be "executed"
-                by a computer. In a programming language, these programming
-                instructions are called statements. A htmlname program is a list
-                of programming statements. htmlname statements are composed of:
-                Values, Operators, Expressions, Keywords, and Comments. This
-                statement tells the browser to write "Hello Dolly." inside an
-                HTML element with Keywords, and Comments. This statement tells
-                the browser to write "Hello Dolly." inside an HTML element with
-                id="demo":htmlname statements are composed
-                <h2>Lorem Ipsum Headings</h2>
+                HTML element with id="demo":reactname statements are composed
                 of: Values, Operators, Expressions, Keywords, and Comments. This
-                statement tells the browser to write "Hello Dolly." inside an
-                HTML element with id="demo":htmlname statements are composed of:
-                Values, Operators, Expressions, Keywords, and Comments. This
                 statement tells the browser to write "Hello Dolly." inside an
                 HTML element with id="demo":
               </p>
@@ -414,11 +399,11 @@ const Details = () => {
       )}
       {/* Javscript comments ended */}
 
-      {/* htmlname let started */}
-      {htmlname === "let" && (
+      {/* reactname variables ended */}
+      {reactname === "variables" && (
         <div className="html_wrapper_page">
           <div className="html_details_page_header">
-            <h1>Html Let</h1>
+            <h1>React Js Variables</h1>
 
             <div
               style={{
@@ -428,10 +413,56 @@ const Details = () => {
                 marginLeft: "30px",
               }}
             >
-              <NavLink to={"/Html/variables"}>
+              <NavLink to={"/React Js/comments"}>
                 <Button>Back</Button>
               </NavLink>
-              <NavLink to={"/Html/const"}>
+              <NavLink to={"/React Js/let"}>
+                <Button>Next</Button>
+              </NavLink>
+            </div>
+            <div>
+              <p>
+                A computer program is a list of "instructions" to be "executed"
+                by a computer. In a programming language, these programming
+                instructions are called statements. A reactname program is a
+                list of programming statements. reactname statements are
+                composed of: Values, Operators, Expressions, Keywords, and
+                Comments. This statement tells the browser to write "Hello
+                Dolly." inside an HTML element with Keywords, and Comments. This
+                statement tells the browser to write "Hello Dolly." inside an
+                HTML element with id="demo":reactname statements are composed
+                <h2>Lorem Ipsum Headings</h2>
+                of: Values, Operators, Expressions, Keywords, and Comments. This
+                statement tells the browser to write "Hello Dolly." inside an
+                HTML element with id="demo":reactname statements are composed
+                of: Values, Operators, Expressions, Keywords, and Comments. This
+                statement tells the browser to write "Hello Dolly." inside an
+                HTML element with id="demo":
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
+      {/* Javscript comments ended */}
+
+      {/* reactname let started */}
+      {reactname === "let" && (
+        <div className="html_wrapper_page">
+          <div className="html_details_page_header">
+            <h1>React Js Let</h1>
+
+            <div
+              style={{
+                display: "flex",
+                width: "60%",
+                justifyContent: "space-between",
+                marginLeft: "30px",
+              }}
+            >
+              <NavLink to={"/React Js/variables"}>
+                <Button>Back</Button>
+              </NavLink>
+              <NavLink to={"/React Js/const"}>
                 <Button>Next</Button>
               </NavLink>
             </div>
@@ -440,11 +471,11 @@ const Details = () => {
       )}
       {/* Javscript comments ended */}
 
-      {/* htmlname const started */}
-      {htmlname === "const" && (
+      {/* reactname const started */}
+      {reactname === "const" && (
         <div className="html_wrapper_page">
           <div className="html_details_page_header">
-            <h1>Html Const</h1>
+            <h1>React Js Const</h1>
 
             <div
               style={{
@@ -454,10 +485,10 @@ const Details = () => {
                 marginLeft: "30px",
               }}
             >
-              <NavLink to={"/Html/let"}>
+              <NavLink to={"/React Js/let"}>
                 <Button>Back</Button>
               </NavLink>
-              <NavLink to={"/Html/operators"}>
+              <NavLink to={"/React Js/operators"}>
                 <Button>Next</Button>
               </NavLink>
             </div>
@@ -466,11 +497,11 @@ const Details = () => {
       )}
       {/* Javscript comments ended */}
 
-      {/* htmlname const started */}
-      {htmlname === "operators" && (
+      {/* reactname const started */}
+      {reactname === "operators" && (
         <div className="html_wrapper_page">
           <div className="html_details_page_header">
-            <h1>Html Const</h1>
+            <h1>React Js Const</h1>
 
             <div
               style={{
@@ -480,10 +511,10 @@ const Details = () => {
                 marginLeft: "30px",
               }}
             >
-              <NavLink to={"/Html/let"}>
+              <NavLink to={"/React Js/let"}>
                 <Button>Back</Button>
               </NavLink>
-              <NavLink to={"/Html/arithamatic"}>
+              <NavLink to={"/React Js/arithamatic"}>
                 <Button>Next</Button>
               </NavLink>
             </div>
@@ -491,11 +522,11 @@ const Details = () => {
         </div>
       )}
       {/* Javscript comments ended */}
-      {/* htmlname arithmatic started */}
-      {htmlname === "arithamatic" && (
+      {/* reactname arithmatic started */}
+      {reactname === "arithamatic" && (
         <div className="html_wrapper_page">
           <div className="html_details_page_header">
-            <h1>Html Arithmatic</h1>
+            <h1>React Js Arithmatic</h1>
 
             <div
               style={{
@@ -505,10 +536,10 @@ const Details = () => {
                 marginLeft: "30px",
               }}
             >
-              <NavLink to={"/Html/operators"}>
+              <NavLink to={"/React Js/operators"}>
                 <Button>Back</Button>
               </NavLink>
-              <NavLink to={"/Html/assignment"}>
+              <NavLink to={"/React Js/assignment"}>
                 <Button>Next</Button>
               </NavLink>
             </div>
@@ -517,11 +548,11 @@ const Details = () => {
       )}
       {/* Javscript arithmatic ended */}
 
-      {/* htmlname assigment started */}
-      {htmlname === "assignment" && (
+      {/* reactname assigment started */}
+      {reactname === "assignment" && (
         <div className="html_wrapper_page">
           <div className="html_details_page_header">
-            <h1>Html Assignment</h1>
+            <h1>React Js Assignment</h1>
 
             <div
               style={{
@@ -531,10 +562,10 @@ const Details = () => {
                 marginLeft: "30px",
               }}
             >
-              <NavLink to={"/Html/arithmatic"}>
+              <NavLink to={"/React Js/arithmatic"}>
                 <Button>Back</Button>
               </NavLink>
-              <NavLink to={"/Html/datatypes"}>
+              <NavLink to={"/React Js/datatypes"}>
                 <Button>Next</Button>
               </NavLink>
             </div>
@@ -543,11 +574,11 @@ const Details = () => {
       )}
       {/* Javscript arithmatic ended */}
 
-      {/* htmlname datatypes started */}
-      {htmlname === "datatypes" && (
+      {/* reactname datatypes started */}
+      {reactname === "datatypes" && (
         <div className="html_wrapper_page">
           <div className="html_details_page_header">
-            <h1>Html Data Types</h1>
+            <h1>React Js Data Types</h1>
 
             <div
               style={{
@@ -557,10 +588,10 @@ const Details = () => {
                 marginLeft: "30px",
               }}
             >
-              <NavLink to={"/Html/assignment"}>
+              <NavLink to={"/React Js/assignment"}>
                 <Button>Back</Button>
               </NavLink>
-              <NavLink to={"/Html/functions"}>
+              <NavLink to={"/React Js/functions"}>
                 <Button>Next</Button>
               </NavLink>
             </div>
@@ -569,11 +600,11 @@ const Details = () => {
       )}
       {/* Javscript dattypes ended */}
 
-      {/* htmlname datatypes started */}
-      {htmlname === "functions" && (
+      {/* reactname datatypes started */}
+      {reactname === "functions" && (
         <div className="html_wrapper_page">
           <div className="html_details_page_header">
-            <h1>Html Functions</h1>
+            <h1>React Js Functions</h1>
 
             <div
               style={{
@@ -583,10 +614,10 @@ const Details = () => {
                 marginLeft: "30px",
               }}
             >
-              <NavLink to={"/Html/datatypes"}>
+              <NavLink to={"/React Js/datatypes"}>
                 <Button>Back</Button>
               </NavLink>
-              <NavLink to={"/Html/objects"}>
+              <NavLink to={"/React Js/objects"}>
                 <Button>Next</Button>
               </NavLink>
             </div>
@@ -595,11 +626,11 @@ const Details = () => {
       )}
       {/* Javscript dattypes ended */}
 
-      {/* htmlname objects started */}
-      {htmlname === "objects" && (
+      {/* reactname objects started */}
+      {reactname === "objects" && (
         <div className="html_wrapper_page">
           <div className="html_details_page_header">
-            <h1>Html Objects</h1>
+            <h1>React Js Objects</h1>
 
             <div
               style={{
@@ -609,10 +640,10 @@ const Details = () => {
                 marginLeft: "30px",
               }}
             >
-              <NavLink to={"/Html/functions"}>
+              <NavLink to={"/React Js/functions"}>
                 <Button>Back</Button>
               </NavLink>
-              <NavLink to={"/Html/events"}>
+              <NavLink to={"/React Js/events"}>
                 <Button>Next</Button>
               </NavLink>
             </div>
@@ -621,11 +652,11 @@ const Details = () => {
       )}
       {/* Javscript dattypes ended */}
 
-      {/* htmlname events started */}
-      {htmlname === "events" && (
+      {/* reactname events started */}
+      {reactname === "events" && (
         <div className="html_wrapper_page">
           <div className="html_details_page_header">
-            <h1>Html Events</h1>
+            <h1>React Js Events</h1>
 
             <div
               style={{
@@ -635,10 +666,10 @@ const Details = () => {
                 marginLeft: "30px",
               }}
             >
-              <NavLink to={"/Html/objects"}>
+              <NavLink to={"/React Js/objects"}>
                 <Button>Back</Button>
               </NavLink>
-              <NavLink to={"/Html/strings"}>
+              <NavLink to={"/React Js/strings"}>
                 <Button>Next</Button>
               </NavLink>
             </div>
@@ -648,10 +679,10 @@ const Details = () => {
       {/* Javscript events ended */}
 
       {/*  */}
-      {htmlname === "strings" && (
+      {reactname === "strings" && (
         <div className="html_wrapper_page">
           <div className="html_details_page_header">
-            <h1>Html Strings</h1>
+            <h1>React Js Strings</h1>
 
             <div
               style={{
@@ -661,10 +692,62 @@ const Details = () => {
                 marginLeft: "30px",
               }}
             >
-              <NavLink to={"/Html/events"}>
+              <NavLink to={"/React Js/events"}>
                 <Button>Back</Button>
               </NavLink>
-              <NavLink to={"/Html/stringmethod"}>
+              <NavLink to={"/React Js/stringmethod"}>
+                <Button>Next</Button>
+              </NavLink>
+            </div>
+          </div>
+        </div>
+      )}
+      {/*  */}
+
+        {/*  */}
+        {reactname === "stringmethod" && (
+        <div className="html_wrapper_page">
+          <div className="html_details_page_header">
+            <h1>React Js Methods</h1>
+
+            <div
+              style={{
+                display: "flex",
+                width: "60%",
+                justifyContent: "space-between",
+                marginLeft: "30px",
+              }}
+            >
+              <NavLink to={"/React Js/strings"}>
+                <Button>Back</Button>
+              </NavLink>
+              <NavLink to={"/React Js/stringsearch"}>
+                <Button>Next</Button>
+              </NavLink>
+            </div>
+          </div>
+        </div>
+      )}
+      {/*  */}
+
+       {/*  */}
+       {reactname === "stringsearch" && (
+        <div className="html_wrapper_page">
+          <div className="html_details_page_header">
+            <h1>React Js Search</h1>
+
+            <div
+              style={{
+                display: "flex",
+                width: "60%",
+                justifyContent: "space-between",
+                marginLeft: "30px",
+              }}
+            >
+              <NavLink to={"/React Js/stringmethod"}>
+                <Button>Back</Button>
+              </NavLink>
+              <NavLink to={"/React Js/stringtemplates"}>
                 <Button>Next</Button>
               </NavLink>
             </div>
@@ -674,10 +757,10 @@ const Details = () => {
       {/*  */}
 
       {/*  */}
-      {htmlname === "stringmethod" && (
+      {reactname === "stringtemplates" && (
         <div className="html_wrapper_page">
           <div className="html_details_page_header">
-            <h1>Html Methods</h1>
+            <h1>React Js Templates</h1>
 
             <div
               style={{
@@ -687,10 +770,10 @@ const Details = () => {
                 marginLeft: "30px",
               }}
             >
-              <NavLink to={"/Html/strings"}>
+              <NavLink to={"/React Js/stringsearch"}>
                 <Button>Back</Button>
               </NavLink>
-              <NavLink to={"/Html/stringsearch"}>
+              <NavLink to={"/React Js/numbers"}>
                 <Button>Next</Button>
               </NavLink>
             </div>
@@ -699,11 +782,11 @@ const Details = () => {
       )}
       {/*  */}
 
-      {/*  */}
-      {htmlname === "stringsearch" && (
+       {/*  */}
+       {reactname === "numbers" && (
         <div className="html_wrapper_page">
           <div className="html_details_page_header">
-            <h1>Html Search</h1>
+            <h1>React Js Numbers</h1>
 
             <div
               style={{
@@ -713,10 +796,10 @@ const Details = () => {
                 marginLeft: "30px",
               }}
             >
-              <NavLink to={"/Html/stringmethod"}>
+              <NavLink to={"/React Js/stringtemplates"}>
                 <Button>Back</Button>
               </NavLink>
-              <NavLink to={"/Html/stringtemplates"}>
+              <NavLink to={"/React Js/bigint"}>
                 <Button>Next</Button>
               </NavLink>
             </div>
@@ -724,12 +807,11 @@ const Details = () => {
         </div>
       )}
       {/*  */}
-
-      {/*  */}
-      {htmlname === "stringtemplates" && (
+        {/*  */}
+        {reactname === "bigint" && (
         <div className="html_wrapper_page">
           <div className="html_details_page_header">
-            <h1>Html Templates</h1>
+            <h1>React Js BigInt</h1>
 
             <div
               style={{
@@ -739,61 +821,10 @@ const Details = () => {
                 marginLeft: "30px",
               }}
             >
-              <NavLink to={"/Html/stringsearch"}>
+              <NavLink to={"/React Js/numbers"}>
                 <Button>Back</Button>
               </NavLink>
-              <NavLink to={"/Html/numbers"}>
-                <Button>Next</Button>
-              </NavLink>
-            </div>
-          </div>
-        </div>
-      )}
-      {/*  */}
-
-      {/*  */}
-      {htmlname === "numbers" && (
-        <div className="html_wrapper_page">
-          <div className="html_details_page_header">
-            <h1>Html Numbers</h1>
-
-            <div
-              style={{
-                display: "flex",
-                width: "60%",
-                justifyContent: "space-between",
-                marginLeft: "30px",
-              }}
-            >
-              <NavLink to={"/Html/stringtemplates"}>
-                <Button>Back</Button>
-              </NavLink>
-              <NavLink to={"/Html/bigint"}>
-                <Button>Next</Button>
-              </NavLink>
-            </div>
-          </div>
-        </div>
-      )}
-      {/*  */}
-      {/*  */}
-      {htmlname === "bigint" && (
-        <div className="html_wrapper_page">
-          <div className="html_details_page_header">
-            <h1>Html BigInt</h1>
-
-            <div
-              style={{
-                display: "flex",
-                width: "60%",
-                justifyContent: "space-between",
-                marginLeft: "30px",
-              }}
-            >
-              <NavLink to={"/Html/numbers"}>
-                <Button>Back</Button>
-              </NavLink>
-              <NavLink to={"/Html/introduction"}>
+              <NavLink to={"/React Js/introduction"}>
                 <Button>Go To Top</Button>
               </NavLink>
             </div>
@@ -805,16 +836,17 @@ const Details = () => {
         <p>
           A computer program is a list of "instructions" to be "executed" by a
           computer. In a programming language, these programming instructions
-          are called statements. A htmlname program is a list of programming
-          statements. htmlname statements are composed of: Values, Operators,
+          are called statements. A reactname program is a list of programming
+          statements. reactname statements are composed of: Values, Operators,
           Expressions, Keywords, and Comments. This statement tells the browser
           to write "Hello Dolly." inside an HTML element with Keywords, and
           Comments. This statement tells the browser to write "Hello Dolly."
-          inside an HTML element with id="demo":htmlname statements are composed
+          inside an HTML element with id="demo":reactname statements are
+          composed
           <h2>Lorem Ipsum Headings</h2>
           of: Values, Operators, Expressions, Keywords, and Comments. This
           statement tells the browser to write "Hello Dolly." inside an HTML
-          element with id="demo":htmlname statements are composed of: Values,
+          element with id="demo":reactname statements are composed of: Values,
           Operators, Expressions, Keywords, and Comments. This statement tells
           the browser to write "Hello Dolly." inside an HTML element with
           id="demo":
@@ -824,4 +856,4 @@ const Details = () => {
     </div>
   );
 };
-export default Details;
+export default ReactCompo;
