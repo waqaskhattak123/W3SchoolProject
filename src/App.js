@@ -21,15 +21,9 @@ import ReactCompo from "./components/ReactCompo";
 import NavBarCompo from "./components/NavBarCompo";
 
 function App() {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isTrue, setIsTrue] = useState(true);
   const [isfocus, setIsFocus] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-  const handleClick = () => {
-    setIsVisible(!isVisible);
-
-    setIsTrue(!isTrue);
-  };
+ 
   const handleFocus = () => {
     setIsFocus(true);
   };
