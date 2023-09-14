@@ -1,14 +1,13 @@
 import React, { useState } from "react";
-import "../App.css";
 import { NavLink } from "react-router-dom";
 
-const Login = () => {
+const SignUp = () => {
   const [getValue, setGetValue] = useState({
     fname: "",
     lname: "",
   });
   const [display, setDisplay] = useState(false);
-  const handleOnChange = (e) => {
+  const handleOnchange = (e) => {
     const { name, value } = e.target;
     setGetValue({
       ...getValue,
@@ -18,30 +17,28 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setDisplay(getValue.fname, getValue.lname);
     setDisplay(true);
   };
-
   return (
     <div>
       {display && (
         <b>
-          {" "}
-          You have been signed in as' {getValue.fname} with Username '{getValue.fname}' and password is ''{getValue.lname}'
+          Thanks for the Registration, Your Credentials is Username'
+          {getValue.fname}' Password '{getValue.lname}'
         </b>
       )}
       <section>
         <form className="signin" onSubmit={handleSubmit}>
           <div className="content">
-            <h2>Login</h2>
+            <h2>Sign Up</h2>
             <div className="form">
               <div className="inputBox">
                 <input
                   type="text"
                   required=""
-                  onChange={handleOnChange}
-                  value={getValue.fname}
                   name="fname"
+                  value={getValue.fname}
+                  onChange={handleOnchange}
                 />{" "}
                 <i>Username</i>
               </div>
@@ -49,15 +46,16 @@ const Login = () => {
                 <input
                   type="password"
                   required=""
-                  onChange={handleOnChange}
                   value={getValue.lname}
                   name="lname"
+                  onChange={handleOnchange}
                 />{" "}
                 <i>Password</i>
               </div>
               <div className="links">
+                {" "}
                 <NavLink>Forgot Password</NavLink>
-                <NavLink to={"/signup/"}>Signup</NavLink>
+                <NavLink to={"/login"}>Login</NavLink>
               </div>
               <div className="inputBox">
                 <input type="submit" defaultValue="Login" />
@@ -103,4 +101,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default SignUp;

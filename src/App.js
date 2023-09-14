@@ -19,6 +19,8 @@ import JavaCompo from "./components/JavaCompo";
 import Cplusplus from "./components/Cplusplus";
 import ReactCompo from "./components/ReactCompo";
 import NavBarCompo from "./components/NavBarCompo";
+import Login from "./components/Login";
+import SignUp from "./components/SignUp";
 
 function App() {
   const [isfocus, setIsFocus] = useState(false);
@@ -56,6 +58,8 @@ function App() {
           <Route path="/C++/:cplusplus" element={<Cplusplus />}></Route>
           <Route path="/react/:reactname" element={<ReactCompo />}></Route>
           <Route path="/navbarcompo/" element={<NavBarCompo />}></Route>
+          <Route path="/login/" element={<Login />}></Route>
+          <Route path="/signup/" element={<SignUp />}></Route>
         </Routes>
       </BrowserRouter>
     </div>

@@ -24,8 +24,8 @@ const NavBarCompo = () => {
         <NavLink onClick={handleClick}>Top Tutorials</NavLink>
         <NavLink to={"/react/introduction"}>Become FrontEnd Developer</NavLink>
         <NavLink to={"/Php/introduction"}>Backend Progg</NavLink>
-        <NavLink>Login</NavLink>
-        <NavLink>SignUp</NavLink>
+        <NavLink to={'/login'}>Login</NavLink>
+        <NavLink to={'signup'}>SignUp</NavLink>
         <NavLink></NavLink>
       </div>
       {isVisible && (
